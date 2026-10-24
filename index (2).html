@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#04070d">
+<title>Saif Ali — Biotechnology &amp; Bioinformatics Portfolio</title>
+<meta name="description" content="Saif Ali — BS Biotechnology student at IIUI, Pakistan. Bioinformatics enthusiast with hands-on experience in genomics, PCR, primer design and computational biology.">
+<link rel="canonical" href="https://saif-ali.me/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Saif Ali — Biotechnology &amp; Bioinformatics Portfolio">
+<meta property="og:description" content="BS Biotechnology student at IIUI, Pakistan. Genomics, PCR, primer design and computational biology.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2304070d'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='700' fill='%233fe3ff' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04070d;--ink:#e8eef8;--mute:#8d9bb3;--h:190;--ac:hsl(var(--h) 100% 65%);--mono:'JetBrains Mono',ui-monospace,monospace;--disp:'Bricolage Grotesque','Inter',system-ui,sans-serif;--e:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{font:400 16px/1.65 Inter,system-ui,sans-serif;color:var(--ink);background:radial-gradient(120% 80% at 70% 0,#0b1426,var(--bg) 60%);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;z-index:59;pointer-events:none;background:radial-gradient(ellipse at center,transparent 55%,#000a)}
+a{color:inherit;text-decoration:none}ul{list-style:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+.grain{position:fixed;inset:-50%;z-index:60;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.8' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");animation:gr .8s steps(4) infinite}
+@keyframes gr{25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}}
+.spot{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(520px circle at var(--mx,50%) var(--my,30%),hsl(var(--h) 100% 60%/.09),transparent 60%)}
+.bar{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--ac),#8b6cff);z-index:70}
+main{position:relative;z-index:2}
+/* chrome */
+.top{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,4vw,48px)}
+.logo{font:800 15px var(--disp);letter-spacing:.3em;position:relative;z-index:2}
+.top nav{display:flex;gap:26px;font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.top nav a:hover,.top nav a[aria-current]{color:#fff}
+.ctl{display:flex;gap:10px;align-items:center;position:relative;z-index:2}
+.snd,.menu{width:36px;height:36px;border:1px solid #ffffff30;border-radius:50%;display:grid;place-items:center;font:500 11px var(--mono);transition:.3s}
+.snd:hover,.menu:hover{border-color:var(--ac)}.snd[aria-pressed=true]{border-color:var(--ac);color:var(--ac)}
+.menu{display:none}
+.dots{position:fixed;right:clamp(12px,2vw,28px);top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:14px}
+.dots a{width:9px;height:9px;border-radius:50%;border:1px solid #fff8;transition:.3s}
+.dots a[aria-current]{background:var(--ac);border-color:var(--ac);box-shadow:0 0 12px var(--ac)}
+.hud{position:fixed;left:clamp(20px,4vw,48px);bottom:18px;z-index:50;font:500 11px var(--mono);letter-spacing:.18em;color:var(--mute);text-transform:uppercase}
+.hud b{color:var(--ac);font-weight:500}
+.up{position:fixed;right:clamp(14px,3vw,36px);bottom:16px;z-index:50;width:42px;height:42px;border-radius:50%;border:1px solid #ffffff30;background:#04070dcc;opacity:0;pointer-events:none;transition:.4s}
+.up.show{opacity:1;pointer-events:auto}.up:hover{border-color:var(--ac);transform:translateY(-3px)}
+.cur{position:fixed;left:0;top:0;width:30px;height:30px;margin:-15px 0 0 -15px;border:1px solid var(--ac);border-radius:50%;z-index:80;pointer-events:none;opacity:0;transition:width .25s,height .25s,margin .25s,opacity .3s,background .25s}
+.fine .cur{opacity:.8}.cur.hv{width:56px;height:56px;margin:-28px 0 0 -28px;background:hsl(var(--h) 100% 60%/.12)}
+.fog{position:fixed;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(40% 30% at 20% 70%,hsl(var(--h) 70% 40%/.12),transparent),radial-gradient(35% 28% at 80% 30%,#8b6cff22,transparent);animation:fg 24s ease-in-out infinite alternate}
+@keyframes fg{to{transform:translate3d(6%,-4%,0) scale(1.15)}}
+.beam{position:fixed;top:-20%;right:12%;width:34vw;height:140%;z-index:0;pointer-events:none;transform:rotate(18deg);background:linear-gradient(90deg,transparent,hsl(var(--h) 100% 70%/.07),transparent);filter:blur(6px);animation:bm 9s ease-in-out infinite alternate}
+@keyframes bm{from{opacity:.4;transform:rotate(18deg) translateX(-4vw)}to{opacity:1;transform:rotate(14deg) translateX(5vw)}}
+#home::after{content:"";position:absolute;inset:86px clamp(14px,3vw,40px) 56px;border:1px solid transparent;pointer-events:none;background:linear-gradient(var(--ac),var(--ac)) 0 0/22px 1px,linear-gradient(var(--ac),var(--ac)) 0 0/1px 22px,linear-gradient(var(--ac),var(--ac)) 100% 0/22px 1px,linear-gradient(var(--ac),var(--ac)) 100% 0/1px 22px,linear-gradient(var(--ac),var(--ac)) 0 100%/22px 1px,linear-gradient(var(--ac),var(--ac)) 0 100%/1px 22px,linear-gradient(var(--ac),var(--ac)) 100% 100%/22px 1px,linear-gradient(var(--ac),var(--ac)) 100% 100%/1px 22px;background-repeat:no-repeat;opacity:.5}
+@media(max-width:860px){.beam{display:none}#home::after{display:none}}
+/* type + layout */
+section{position:relative;isolation:isolate;min-height:100svh;padding:clamp(100px,15vh,160px) clamp(20px,6vw,90px) clamp(70px,10vh,110px);display:flex;align-items:center}
+section::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none}
+.in-w{width:100%;max-width:1200px;margin:auto}
+.mono{font:500 11px/1.5 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--ac)}
+h2{font:800 clamp(34px,6vw,84px)/1 var(--disp);letter-spacing:-.03em;margin:14px 0 30px}
+h3{font-family:var(--disp)}
+.mute{color:var(--mute)}
+.btn{display:inline-flex;gap:10px;align-items:center;padding:15px 26px;border-radius:99px;font:500 12px var(--mono);letter-spacing:.16em;text-transform:uppercase;border:1px solid #ffffff2a;transition:border-color .3s,box-shadow .3s,transform .2s}
+.btn:hover{border-color:var(--ac)}
+.btn.p{background:linear-gradient(120deg,var(--ac),hsl(calc(var(--h) + 70) 100% 72%));color:#021018;border:0;box-shadow:0 0 44px -10px var(--ac)}
+.btn.p:hover{box-shadow:0 0 60px -4px var(--ac)}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+/* hero */
+#home::before{background:linear-gradient(180deg,transparent 60%,#04070d)}
+.streak{position:absolute;height:1px;width:60vw;top:46%;left:-60vw;background:linear-gradient(90deg,transparent,var(--ac),transparent);animation:st 2.2s .2s var(--e) forwards}
+@keyframes st{to{left:110vw;opacity:0}}
+.name{font:800 clamp(64px,15vw,210px)/.86 var(--disp);letter-spacing:-.05em;margin:18px 0 22px;position:relative;display:block;animation:ni 1.8s .3s var(--e) both}
+@keyframes ni{from{opacity:0;filter:blur(22px);letter-spacing:.25em}}
+.name::before,.name::after{content:attr(data-text);position:absolute;left:0;top:0;opacity:.7;mix-blend-mode:screen;animation:gl 5s 2.4s infinite steps(1)}
+.name::before{color:#3fe3ff}.name::after{color:#8b6cff}
+@keyframes gl{0%,92%,100%{clip-path:inset(0 0 100% 0);transform:none}93%{clip-path:inset(20% 0 55% 0);transform:translateX(-6px)}95%{clip-path:inset(60% 0 12% 0);transform:translateX(6px)}97%{clip-path:inset(40% 0 40% 0);transform:translateX(-3px)}}
+.beyond{font:600 clamp(16px,2.4vw,28px) var(--disp);letter-spacing:.32em;margin-bottom:18px}
+.lede{max-width:56ch;color:#b4c0d6;font-size:clamp(16px,1.6vw,19px);margin-bottom:34px}
+.hstats{display:flex;flex-wrap:wrap;gap:34px;margin-top:46px;padding-top:22px;border-top:1px solid #ffffff1c;max-width:560px}
+.hstats b{font:800 34px var(--disp);display:block;color:#fff}.hstats span{font:500 10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.skip{position:absolute;right:clamp(20px,6vw,90px);bottom:64px;font:500 10px var(--mono);letter-spacing:.2em;color:var(--mute);text-transform:uppercase;animation:fo 1s 3.4s forwards}
+@keyframes fo{to{opacity:0;visibility:hidden}}
+.skipped *{animation-duration:.01s!important;animation-delay:0s!important;transition-delay:0s!important}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--e) var(--d,0s),transform .9s var(--e) var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.w{display:inline-block;white-space:nowrap;overflow:hidden;vertical-align:top;padding-bottom:.1em}
+.c{display:inline-block;transform:translateY(105%);transition:transform .8s var(--e)}.in>.w>.c{transform:none}
+/* origin */
+#about::before{background:linear-gradient(90deg,hsl(var(--h) 80% 50%/.08),transparent 50%)}
+.g2{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.big{font:600 clamp(22px,3vw,38px)/1.25 var(--disp);letter-spacing:-.01em}.big em{font-style:normal;color:var(--ac)}
+.tl{position:relative;padding-left:30px;margin-top:8px}
+.tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:1px;background:linear-gradient(var(--ac),transparent);transform-origin:top;transform:scaleY(0);transition:transform 1.6s var(--e)}
+.tl.in::before{transform:none}
+.tl div{position:relative;padding-bottom:26px}
+.tl div::before{content:"";position:absolute;left:-30px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--ac);box-shadow:0 0 12px var(--ac)}
+.tl b{display:block;font:600 19px var(--disp)}.tl span{color:var(--mute);font-size:14px}
+/* mission */
+#mission::before{background:radial-gradient(60% 50% at 20% 50%,hsl(calc(var(--h) + 70) 90% 55%/.1),transparent)}
+.ints li{font:800 clamp(28px,5.4vw,76px)/1.12 var(--disp);letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1px #ffffff55;transition:.4s var(--e);cursor:default;display:flex;gap:18px;align-items:baseline}
+.ints li i{font:500 11px var(--mono);letter-spacing:.2em;color:var(--ac);-webkit-text-stroke:0;font-style:normal}
+.ints li:hover{color:#fff;-webkit-text-stroke:1px #fff;transform:translateX(14px)}
+/* lab */
+#experience::before{background:repeating-linear-gradient(0deg,#ffffff07 0 1px,transparent 1px 4px)}
+.dos{position:relative;overflow:hidden;border:1px solid #ffffff1c;background:linear-gradient(180deg,#ffffff0b,#ffffff03);backdrop-filter:blur(10px);margin-bottom:18px;max-width:900px}
+.dos::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--ac),transparent);opacity:.7;animation:sc 5s linear infinite;pointer-events:none}
+@keyframes sc{from{transform:translateY(-4px)}to{transform:translateY(420px)}}
+.dos summary{list-style:none;cursor:pointer;padding:26px 30px;display:grid;gap:4px}
+.dos summary::-webkit-details-marker{display:none}
+.dos summary h3{font-size:clamp(20px,2.6vw,28px);line-height:1.2}
+.dos summary small{font:500 11px var(--mono);letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+.dos summary::after{content:"Show details +";font:500 10px var(--mono);letter-spacing:.2em;color:var(--ac);text-transform:uppercase;margin-top:10px}
+.dos[open] summary::after{content:"Hide details −"}
+.dos .bd{padding:0 30px 28px}
+.dos li{position:relative;padding:3px 0 3px 20px;color:#b4c0d6}
+.dos li::before{content:"›";position:absolute;left:0;color:var(--ac)}
+.tg{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tg span{font:500 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;border:1px solid hsl(var(--h) 100% 65%/.4);color:var(--ac);padding:5px 10px}
+/* intelligence */
+#skills::before{background:radial-gradient(circle at 1px 1px,#ffffff16 1px,transparent 0) 0 0/32px 32px;-webkit-mask:radial-gradient(70% 60% at 50% 50%,#000,transparent);mask:radial-gradient(70% 60% at 50% 50%,#000,transparent)}
+#net{width:100%;height:auto;display:block;max-height:76vh}
+#net line{stroke:hsl(var(--h) 100% 65%/.25);stroke-width:1}
+#net line.sig{stroke-dasharray:3 9;animation:da 1.6s linear infinite;stroke:hsl(var(--h) 100% 70%/.6)}
+#net line.x{stroke-dasharray:2 5;stroke:#8b6cff88}#net line.hl{stroke:#fff;stroke-width:1.6}
+@keyframes da{to{stroke-dashoffset:-24}}
+#net .nd{cursor:pointer;outline:none}
+#net .nd circle{fill:#04070d;stroke:var(--ac);stroke-width:1.5;transition:.3s;animation:pu 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pu{50%{transform:scale(1.35)}}
+#net .nd text{font:500 12px Inter,sans-serif;fill:#b4c0d6;transition:.3s}
+#net .nd:hover circle,#net .nd:focus circle,#net .nd.on circle{fill:var(--ac);stroke:#fff}
+#net .nd:hover text,#net .nd:focus text,#net .nd.on text{fill:#fff}
+#net .hub circle{fill:#0a1424;stroke:#8b6cff;stroke-width:1.5}#net .hub text{font:500 9px var(--mono);letter-spacing:.14em;fill:#cbb8ff;text-anchor:middle}
+.chips{display:none}.chips h4{font:500 11px var(--mono);letter-spacing:.14em;color:var(--ac);text-transform:uppercase;margin:20px 0 10px}
+.chip{border:1px solid #ffffff30;border-radius:99px;padding:8px 14px;margin:0 8px 8px 0;font-size:14px}.chip.on{border-color:var(--ac);color:var(--ac)}
+#pn{margin-top:18px;border-left:2px solid var(--ac);padding:6px 0 6px 20px;max-width:640px;min-height:110px}
+#pn h3{font-size:26px;margin:4px 0}
+/* experiments */
+#projects::before{background:linear-gradient(180deg,transparent,hsl(var(--h) 80% 40%/.07),transparent)}
+#projects{padding-inline:0}#projects .head{padding-inline:clamp(20px,6vw,90px)}
+.trk{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px clamp(20px,6vw,90px) 30px;scrollbar-width:thin}
+.case{flex:0 0 min(86vw,410px);scroll-snap-align:start;border:1px solid hsl(var(--c) 80% 60%/.3);background:radial-gradient(120% 80% at 0 0,hsl(var(--c) 90% 50%/.16),#060b14 70%);padding:24px;display:flex;flex-direction:column;transition:transform .4s var(--e),border-color .3s}
+.case:hover{transform:translateY(-6px);border-color:hsl(var(--c) 90% 65%)}
+.mo{width:100%;height:120px;margin-bottom:14px}
+.mo *{fill:none;stroke:hsl(var(--c) 95% 65%);stroke-width:1}
+.mo .rg{animation:pu 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.mo .wv{stroke-dasharray:6 4;animation:da 3s linear infinite}
+.mo .dt{fill:hsl(var(--c) 95% 70%);stroke:0;animation:tw 2.4s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15}}
+.case h3{font-size:24px;line-height:1.15;margin:8px 0 10px}.case p{color:#b4c0d6;font-size:15px}
+.case details{margin-top:14px}.case summary{cursor:pointer;color:hsl(var(--c) 95% 70%);font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;list-style:none}
+.case summary::-webkit-details-marker{display:none}.case summary::after{content:"Read more +"}.case details[open] summary::after{content:"Show less −"}
+.case details p{margin-top:10px}
+.nav2{display:flex;gap:10px;margin-top:6px}.nav2 button{width:44px;height:44px;border:1px solid #ffffff30;border-radius:50%;transition:.3s}.nav2 button:hover{border-color:var(--ac)}
+/* contact */
+#contact::before{background:radial-gradient(60% 45% at 50% 100%,hsl(var(--h) 100% 60%/.22),transparent)}
+.cg{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,6vw,80px);margin-top:20px}
+.fc{border:1px solid #ffffff1c;background:#ffffff06;backdrop-filter:blur(10px);padding:28px}
+.fd{margin-bottom:16px}.fd label{display:block;font:500 10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.fd input,.fd textarea{width:100%;background:#04070d99;border:1px solid #ffffff22;color:var(--ink);padding:12px 14px;font:inherit;resize:vertical;transition:border-color .3s}
+.fd input:focus,.fd textarea:focus{border-color:var(--ac);outline:0}
+#st{margin-top:12px;font:500 12px var(--mono);color:var(--ac);min-height:1.4em}
+.ci a,.ci span{display:block;font:600 clamp(17px,2vw,22px) var(--disp);padding:14px 0;border-bottom:1px solid #ffffff1c;transition:.3s}
+.ci a:hover{color:var(--ac);padding-left:10px}
+footer{position:relative;z-index:2;text-align:center;padding:50px 20px 70px;font:500 11px var(--mono);letter-spacing:.16em;color:var(--mute);text-transform:uppercase}
+footer a:hover{color:#fff}
+.end{height:1px;max-width:360px;margin:0 auto 26px;background:linear-gradient(90deg,transparent,var(--ac),transparent);animation:br 3.5s ease-in-out infinite}
+@keyframes br{50%{opacity:.2;transform:scaleX(.4)}}
+@media(max-width:860px){
+ .top nav{position:fixed;inset:0;background:#04070df4;flex-direction:column;justify-content:center;align-items:center;font-size:15px;gap:30px;visibility:hidden;opacity:0;transition:.4s}
+ .top.open nav{visibility:visible;opacity:1}.menu{display:grid}
+ .g2,.cg{grid-template-columns:1fr}.dots{display:none}
+ #net{display:none}.chips{display:block}
+ section{min-height:auto}.hud{display:none}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div><div class="fog" aria-hidden="true"></div><div class="beam" aria-hidden="true"></div><div class="spot" aria-hidden="true"></div><div class="cur" id="cur" aria-hidden="true"></div><div class="bar" id="bar"></div>
+
+<header class="top" id="top">
+  <a href="#home" class="logo" aria-label="Saif Ali — home">SAIF ALI</a>
+  <nav id="nav" aria-label="Sections">
+    <a href="#about">About</a><a href="#mission">Research</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="ctl">
+    <button class="snd" id="snd" aria-pressed="false" aria-label="Toggle ambient sound (off by default)">♪</button>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="nav" aria-label="Menu">≡</button>
+  </div>
+</header>
+<div class="dots" id="dots"></div>
+<div class="hud" id="hud" aria-hidden="true"></div>
+<button class="up" id="up" aria-label="Back to top">↑</button>
+
+<main>
+<section id="home" data-ch="01" data-t="Home" data-h="190">
+  <div class="streak" aria-hidden="true"></div>
+  <div class="in-w">
+    <p class="mono rv in" style="--d:.2s">Biotechnology · Bioinformatics · IIUI, Pakistan</p>
+    <h1 class="name" data-text="SAIF ALI">SAIF ALI</h1>
+    <p class="beyond" data-split style="transition-delay:0s">BIOTECHNOLOGY &amp; BIOINFORMATICS STUDENT</p>
+    <p class="lede rv" style="--d:1.9s">I’m a Biotechnology student at IIUI. I combine lab work with computer tools to study biology, analyze data, and explore solutions to real-world problems.</p>
+    <div class="row rv" style="--d:2.1s">
+      <a class="btn p mag" href="#about">Enter my world →</a>
+      <a class="btn mag" href="./saif-ali-cv.pdf" download>Download CV</a>
+      <a class="btn mag" href="#projects">View Projects</a>
+    </div>
+    <div class="hstats rv" style="--d:2.3s">
+      <div><b>3</b><span>Internships completed</span></div>
+      <div><b>6</b><span>Projects &amp; reports</span></div>
+      <div><b>3</b><span>BS years completed</span></div>
+    </div>
+  </div>
+  <button class="skip" id="skip">Skip intro</button>
+</section>
+
+<section id="about" data-ch="02" data-t="About" data-h="205">
+  <div class="in-w">
+    <p class="mono rv">About</p>
+    <h2 data-split>About me.</h2>
+    <div class="g2">
+      <div>
+        <p class="big rv">I’m a BS Biotechnology student at the International Islamic University, Islamabad, driven by a desire to integrate computational tools with biological research. My focus sits where <em>bioinformatics and computational genomics</em> meet — using data to ask better biological questions.</p>
+        <p class="mute rv" style="margin-top:22px;max-width:56ch">Hands-on at NIGAB-NARC, PCSIR and NIH Pakistan: DNA extraction, gel electrophoresis, PCR and primer design, alongside Python and R for biological data.</p>
+        <p class="mono rv" style="margin-top:22px;color:var(--mute)">Jhelum, Punjab, Pakistan</p>
+      </div>
+      <div class="tl rv">
+        <div><b>BS Biotechnology</b><span>International Islamic University, Islamabad · Sept 2023 – Sept 2027 (expected)</span></div>
+        <div><b>FSc Pre-Medical</b><span>Higher secondary</span></div>
+        <div><b>Matriculation</b><span>Secondary school</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mission" data-ch="03" data-t="Research" data-h="265">
+  <div class="in-w">
+    <p class="mono rv">Research</p>
+    <h2 data-split>Research interests.</h2>
+    <ul class="ints">
+      <li class="rv"><i>01</i>Bioinformatics &amp; Computational Genomics</li>
+      <li class="rv"><i>02</i>Machine Learning in Biology</li>
+      <li class="rv"><i>03</i>Computational Drug Discovery</li>
+      <li class="rv"><i>04</i>CRISPR &amp; Genome Editing</li>
+      <li class="rv"><i>05</i>NGS Data Analysis</li>
+      <li class="rv"><i>06</i>R Programming for Omics</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience" data-ch="04" data-t="Experience" data-h="190">
+  <div class="in-w">
+    <p class="mono rv">Experience</p>
+    <h2 data-split>Internships &amp; lab rotations.</h2>
+    <p class="mute rv" style="max-width:56ch;margin:-10px 0 28px">Three placements across genomics, health sciences and multi-disciplinary lab work.</p>
+    <details class="dos rv" open>
+      <summary><small>Jul – Sep 2026 · Supervisor: Dr. Zaheer Abbas</small><h3>Genomics Research Intern</h3><small>NIGAB — National Institute for Genomics &amp; Advanced Biotechnology, NARC</small></summary>
+      <div class="bd"><ul><li>Designed and validated PCR primers for OsARF11 with Primer-BLAST and NCBI databases.</li><li>Ran gel electrophoresis to confirm amplification and primer specificity.</li><li>Extracted DNA and optimized PCR across multiple rice genotypes.</li><li>Documented protocols and results for supervisor review.</li></ul><div class="tg"><span>Primer-BLAST</span><span>NCBI</span><span>PCR</span><span>Gel electrophoresis</span><span>DNA extraction</span></div></div>
+    </details>
+    <details class="dos rv">
+      <summary><small>Jul – Aug 2026</small><h3>Health Sciences Intern</h3><small>National Institutes of Health (NIH), Pakistan</small></summary>
+      <div class="bd"><ul><li>Rotated through health sciences labs, observing diagnostic and research workflows.</li><li>Assisted with sample handling and lab documentation.</li><li>Gained exposure to public-health lab operations and quality standards.</li></ul><div class="tg"><span>Sample handling</span><span>Documentation</span><span>Quality standards</span></div></div>
+    </details>
+    <details class="dos rv">
+      <summary><small>Mar 2026 · 8 weeks</small><h3>Multi-Lab Rotation Intern</h3><small>PCSIR — Pakistan Council of Scientific &amp; Industrial Research</small></summary>
+      <div class="bd"><p class="mute" style="font-size:13px;margin-bottom:10px">Supervisors: Mrs. Razia Kalsoom, Dr. Fouzia Noureen, Miss Fouzia Hussain, Dr. Uzma Rashid</p><ul><li>Rotated across analytical and microbiology labs over eight weeks.</li><li>Practiced titration, NanoDrop quantification and general instrumental analysis.</li><li>Learned media preparation and core microbiology handling protocols.</li><li>Compiled a multi-lab techniques report of methods and findings.</li></ul><div class="tg"><span>Titration</span><span>NanoDrop</span><span>Media prep</span><span>Microbiology</span></div></div>
+    </details>
+  </div>
+</section>
+
+<section id="skills" data-ch="05" data-t="Skills" data-h="175">
+  <div class="in-w">
+    <p class="mono rv">Skills</p>
+    <h2 data-split>Lab, computational &amp; analytical toolkit.</h2>
+    <p class="mute rv" style="max-width:56ch;margin:-10px 0 18px">Wet lab to terminal. Hover, focus or tap a node to explore how each skill connects.</p>
+    <svg id="net" viewBox="0 0 900 560" role="group" aria-label="Skill network"></svg>
+    <div class="chips" id="chips"></div>
+    <div id="pn" aria-live="polite"><p class="mono" id="pg">Select a node</p><h3 id="pt">Skill network</h3><p class="mute" id="px">Each node is a skill; lines show where techniques feed into each other.</p></div>
+  </div>
+</section>
+
+<section id="projects" data-ch="06" data-t="Projects" data-h="275">
+  <div class="in-w head">
+    <p class="mono rv">Projects</p>
+    <h2 data-split>Reports, studies &amp; ongoing work.</h2>
+    <p class="mute rv" style="max-width:56ch;margin:-10px 0 18px">Scroll sideways, drag, or use the arrows.</p>
+  </div>
+  <div class="trk" id="trk" tabindex="0" role="region" aria-label="Projects"></div>
+  <div class="head in-w nav2"><button id="pv" aria-label="Previous case">←</button><button id="nx" aria-label="Next case">→</button></div>
+</section>
+
+<section id="contact" data-ch="07" data-t="Contact" data-h="190">
+  <div class="in-w">
+    <p class="mono rv">Contact</p>
+    <h2 data-split>Let’s talk research, internships or collaboration.</h2>
+    <div class="cg">
+      <form class="fc rv" id="form" action="https://formsubmit.co/ajax/saifali15874@gmail.com" method="POST">
+        <div class="fd"><label for="n">Name</label><input id="n" name="name" required autocomplete="name"></div>
+        <div class="fd"><label for="e">Email</label><input id="e" name="email" type="email" required autocomplete="email"></div>
+        <div class="fd"><label for="s">Subject</label><input id="s" name="subject"></div>
+        <div class="fd"><label for="m">Message</label><textarea id="m" name="message" rows="4" required></textarea></div>
+        <button class="btn p mag" type="submit">Send message →</button>
+        <div id="st" role="status"></div>
+      </form>
+      <div class="ci rv">
+        <a href="mailto:saifali15874@gmail.com">saifali15874@gmail.com</a>
+        <span>Jhelum, Punjab, Pakistan</span>
+        <a href="https://linkedin.com/in/saif-ali-421b20369" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="./saif-ali-cv.pdf" download>Download CV ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="end" aria-hidden="true"></div>© 2026 Saif Ali · <a href="mailto:saifali15874@gmail.com">Email</a> · <a href="https://linkedin.com/in/saif-ali-421b20369" target="_blank" rel="noopener">LinkedIn</a></footer>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,root=document.documentElement;
+root.classList.add('js');
+
+/* ---- text split + reveal ---- */
+$$('[data-split]').forEach(e=>{const t=e.textContent;e.setAttribute('aria-label',t);e.textContent='';let i=0;
+  t.split(' ').forEach(w=>{const s=document.createElement('span');s.className='w';s.setAttribute('aria-hidden','true');
+    [...w].forEach(c=>{const k=document.createElement('span');k.className='c';k.textContent=c;k.style.transitionDelay=(i++*26)+'ms';s.append(k)});
+    e.append(s,' ')})});
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}}),{threshold:.12});
+$$('.rv,[data-split]').forEach(e=>rio.observe(e));
+$('#skip').onclick=()=>{root.classList.add('skipped');$('#skip').remove()};
+
+/* ---- background: DNA helix + particles (Canvas 2D) ---- */
+const cv=$('#bg'),x=cv.getContext('2d');let W,H,t=0,mx=.5,my=.4,sy=0,hu=190,th=190,raf,P=[];
+function rs(){const D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*D;cv.height=H*D;x.setTransform(D,0,0,D,0,0);
+  P=Array.from({length:W<700?45:90},()=>({x:Math.random()*W,y:Math.random()*H,z:Math.random(),s:Math.random()*6.28}));if(RM)fr()}
+function dot(px,py,z,h,al){x.fillStyle=`hsla(${h},100%,${62+z*14}%,${(.3+(z+1)*.3)*al})`;x.beginPath();x.arc(px,py,2+(z+1)*2,0,6.283);x.fill();
+  x.fillStyle=`hsla(${h},100%,70%,${.05*al})`;x.beginPath();x.arc(px,py,9+z*3,0,6.283);x.fill()}
+function fr(){
+  t+=.016;hu+=(th-hu)*(RM?1:.04);root.style.setProperty('--h',hu.toFixed(1));
+  x.clearRect(0,0,W,H);x.globalCompositeOperation='lighter';
+  const wide=W>860,al=wide?1:.5,cx=(wide?W*.7:W*.5)+(mx-.5)*40,cy=H*.5+(my-.5)*30,R=Math.min(W,H)*(wide?.17:.2),n=70,hh=H*1.5,rot=(RM?0:t*.5)+sy*.003;
+  x.save();x.translate(cx,cy);x.rotate(-.42);x.lineWidth=1;
+  for(let i=0;i<n;i++){const y=(i/(n-1)-.5)*hh,a=i*.32+rot,p=Math.cos(a)*R,z=Math.sin(a);
+    if(i%2==0){x.strokeStyle=`hsla(${hu},100%,70%,${.12*al})`;x.beginPath();x.moveTo(p,y);x.lineTo(-p,y);x.stroke()}
+    dot(p,y,z,hu,al);dot(-p,y,-z,hu+55,al)}
+  x.restore();
+  for(const p of P){p.y-=.12+p.z*.3;p.x+=Math.sin(t+p.s)*.12;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}
+    const dx=p.x-mx*W,dy=p.y-my*H,d=dx*dx+dy*dy;if(d<14000){p.x+=dx*.01;p.y+=dy*.01}
+    x.fillStyle=`hsla(${hu},100%,85%,${.15+.4*Math.abs(Math.sin(t+p.s))})`;x.fillRect(p.x,p.y,1+p.z*1.5,1+p.z*1.5)}
+}
+function loop(){fr();raf=requestAnimationFrame(loop)}
+addEventListener('resize',rs);rs();if(!RM)loop();
+document.addEventListener('visibilitychange',()=>{cancelAnimationFrame(raf);if(!document.hidden&&!RM)loop()});
+
+/* ---- scroll, chapters, progress ---- */
+const secs=$$('section[data-t]'),dots=$('#dots'),links=$$('#nav a');
+secs.forEach(s=>{const a=document.createElement('a');a.href='#'+s.id;a.setAttribute('aria-label',s.dataset.t);dots.append(a)});
+const dl=$$('a',dots);
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const s=e.target,i=secs.indexOf(s);
+  th=+s.dataset.h;if(RM){hu=th;fr()}
+  $('#hud').innerHTML=`<b>${s.dataset.ch} / 07</b> — ${s.dataset.t}`;
+  dl.forEach((a,j)=>j===i?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'));
+  links.forEach(a=>a.getAttribute('href')==='#'+s.id?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'))}),{rootMargin:'-45% 0px -45% 0px'});
+secs.forEach(s=>cio.observe(s));
+const bar=$('#bar'),up=$('#up');
+addEventListener('scroll',()=>{sy=scrollY;bar.style.transform=`scaleX(${sy/Math.max(1,document.body.scrollHeight-H)})`;up.classList.toggle('show',sy>900);if(RM)fr()},{passive:true});
+up.onclick=()=>scrollTo({top:0,behavior:RM?'auto':'smooth'});
+const tb=$('#top'),menu=$('#menu');
+menu.onclick=()=>{const o=tb.classList.toggle('open');menu.setAttribute('aria-expanded',o)};
+links.forEach(a=>a.addEventListener('click',()=>{tb.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+
+/* ---- cursor, spotlight, magnetic buttons ---- */
+const fine=matchMedia('(pointer:fine)').matches,cur=$('#cur');if(fine)root.classList.add('fine');
+addEventListener('pointermove',e=>{mx=e.clientX/W;my=e.clientY/H;document.body.style.setProperty('--mx',e.clientX+'px');document.body.style.setProperty('--my',e.clientY+'px');
+  if(fine){cur.style.transform=`translate(${e.clientX}px,${e.clientY}px)`;cur.classList.toggle('hv',!!e.target.closest('a,button,summary,.nd,.chip'))}},{passive:true});
+if(fine&&!RM)$$('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.22}px,${(e.clientY-r.top-r.height/2)*.3}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')});
+
+/* ---- skills network ---- */
+const GR=[["LAB","Molecular Biology & Lab Techniques",["DNA Extraction (CTAB)","Agarose Gel Prep","Gel Electrophoresis","PCR","Primer Designing","Media Preparation","qPCR","Tissue Culture"]],
+["GENOMICS","Bioinformatics & Genomic Analysis",["Primer-BLAST / NCBI","SnapGene","Computational Genomics","Bioinformatics Tools","Data Analysis","R Basics"]],
+["CODE","Computational Tools & Programming",["Python","MS Excel","AutoDock","Machine Learning","CAD"]],
+["ANALYSIS","Analytical Instruments & Sequencing",["NanoDrop","Titration","HPLC","ICP-OES / ICP-MS","NGS Analysis"]]];
+const DT={"PCR":"Amplifies a target DNA region. Optimized across multiple rice genotypes during the NIGAB internship.","Primer Designing":"Designed and validated primers for OsARF11 with Primer-BLAST and NCBI databases.","Gel Electrophoresis":"Used to confirm amplification and primer specificity at NIGAB.","DNA Extraction (CTAB)":"Extracted DNA for PCR work across multiple rice genotypes at NIGAB.","Primer-BLAST / NCBI":"Checks primer specificity against NCBI databases. Used for the OsARF11 primer design.","NanoDrop":"Nucleic acid quantification, practiced during the PCSIR rotation.","Titration":"Practiced in the analytical labs during the PCSIR rotation.","Media Preparation":"Learned in the microbiology labs during the PCSIR rotation.","Python":"Used alongside R for biological data work.","R Basics":"Currently building fluency in R for statistical analysis and visualization of biological data.","Machine Learning":"In progress: studying classification and clustering applied to genomic and expression data.","SnapGene":"Molecular biology software for sequence viewing and planning.","NGS Analysis":"A core research interest in computational genomics."};
+const XL=[["PCR","Primer Designing"],["Primer Designing","Primer-BLAST / NCBI"],["Agarose Gel Prep","Gel Electrophoresis"],["PCR","Gel Electrophoresis"],["Python","Machine Learning"],["R Basics","Data Analysis"],["NGS Analysis","Computational Genomics"],["SnapGene","Primer Designing"]];
+const HB=[[225,140],[675,140],[225,420],[675,420]],R0=95,pos={};let L="",X="",N="",C="";
+GR.forEach(([s,g,it],gi)=>{const[hx,hy]=HB[gi];L+=`<line class="sig" x1="450" y1="280" x2="${hx}" y2="${hy}"/>`;C+=`<h4>${g}</h4>`;
+  it.forEach((k,i)=>{const a=-Math.PI/2+i/it.length*6.283,px=hx+Math.cos(a)*R0,py=hy+Math.sin(a)*R0,c=Math.cos(a);pos[k]=[px,py];
+    L+=`<line x1="${hx}" y1="${hy}" x2="${px}" y2="${py}"/>`;
+    const an=c>.25?"start":c<-.25?"end":"middle",dx=c>.25?12:c<-.25?-12:0,dy=Math.abs(c)<=.25?(Math.sin(a)>0?22:-12):4;
+    N+=`<g class="nd" tabindex="0" role="button" data-k="${k}" data-g="${gi}" aria-label="${k}"><circle cx="${px}" cy="${py}" r="6" style="animation-delay:${i*.4}s"/><text x="${px+dx}" y="${py+dy}" text-anchor="${an}">${k}</text></g>`;
+    C+=`<button class="chip" data-k="${k}" data-g="${gi}">${k}</button>`});
+  N+=`<g class="hub"><circle cx="${hx}" cy="${hy}" r="30"/><text x="${hx}" y="${hy+3}">${s}</text></g>`});
+XL.forEach(([a,b])=>X+=`<line class="x" data-a="${a}" data-b="${b}" x1="${pos[a][0]}" y1="${pos[a][1]}" x2="${pos[b][0]}" y2="${pos[b][1]}"/>`);
+$('#net').innerHTML=L+X+N+`<g class="hub"><circle cx="450" cy="280" r="34"/><text x="450" y="284">SA</text></g>`;$('#chips').innerHTML=C;
+function pick(k,gi){$$('.nd,.chip').forEach(n=>n.classList.toggle('on',n.dataset.k===k));$$('#net line.x').forEach(l=>l.classList.toggle('hl',l.dataset.a===k||l.dataset.b===k));
+  $('#pg').textContent=GR[gi][1];$('#pt').textContent=k;$('#px').textContent=DT[k]||`Part of my ${GR[gi][1].toLowerCase()} toolkit.`}
+$$('.nd,.chip').forEach(n=>{const f=()=>pick(n.dataset.k,+n.dataset.g);n.addEventListener('mouseenter',f);n.addEventListener('focus',f);n.addEventListener('click',f);
+  n.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f()}})});
+
+/* ---- projects ---- */
+const PJ=[["Research","","Dengue Fever Awareness Survey","Community-level survey assessing public knowledge and prevention practices around dengue fever.","Designed and distributed a structured questionnaire to evaluate awareness of dengue transmission, symptoms and prevention within the local community, then analyzed responses to identify knowledge gaps.",190],
+["Molecular","","Cas12a (Cpf1) Nuclease Study","Literature-based study on the structure, mechanism and applications of the Cas12a nuclease in genome editing.","Reviewed how Cas12a’s single RNA-guided nuclease mechanism differs from Cas9, its staggered-cut DNA repair implications, and its growing role in diagnostics and genome engineering.",265],
+["Internship","2026","PCSIR Lab Techniques Report","Consolidated report covering the analytical and microbiology techniques practiced during the PCSIR rotation.","Documented titration procedures, NanoDrop quantification, media preparation and instrumentation basics across the 8-week, multi-lab PCSIR rotation.",215],
+["Internship","2026","NIGAB Genomics Report","Summary report of primer design and PCR-based genomics work carried out at NIGAB-NARC.","Detailed the primer design workflow for OsARF11 using Primer-BLAST, the PCR optimization steps taken, and gel electrophoresis results confirming amplification.",175],
+["ML · In progress","","ML in Bioinformatics","Exploring machine learning approaches applied to biological and genomic datasets.","Currently studying how classification and clustering methods can be applied to genomic and expression data as a foundation for future computational biology work.",285],
+["ML · In progress","","R Programming for Biological Data","Building fluency in R for statistical analysis and visualization of biological datasets.","Working through R fundamentals — data wrangling, statistical tests and plotting — with a focus on applying them to omics-style datasets.",200]];
+function mo(i){let s='<svg class="mo" viewBox="0 0 200 120" aria-hidden="true">',k=i%3;
+  if(k==0)for(let r=1;r<=5;r++)s+=`<circle class="rg" cx="100" cy="60" r="${r*11}" style="animation-delay:${r*.2}s"/>`;
+  else if(k==1){let a="",b="";for(let q=0;q<=200;q+=4){a+=(q?"L":"M")+q+" "+(60+Math.sin(q/14+i)*30);b+=(q?"L":"M")+q+" "+(60-Math.sin(q/14+i)*30)}s+=`<path class="wv" d="${a}"/><path class="wv" d="${b}"/>`}
+  else for(let r=0;r<4;r++)for(let c=0;c<12;c++)s+=`<circle class="dt" cx="${14+c*16}" cy="${18+r*28}" r="2.2" style="animation-delay:${((r*12+c)%9)*.27}s"/>`;
+  return s+'</svg>'}
+$('#trk').innerHTML=PJ.map((p,i)=>`<article class="case" style="--c:${p[5]}">${mo(i)}<p class="mono" style="color:hsl(${p[5]} 95% 70%)">Project ${String(i+1).padStart(2,'0')} · ${p[0]}${p[1]?' · '+p[1]:''}</p><h3>${p[2]}</h3><p>${p[3]}</p><details><summary></summary><p>${p[4]}</p></details></article>`).join('');
+const step=d=>$('#trk').scrollBy({left:d*430,behavior:RM?'auto':'smooth'});$('#pv').onclick=()=>step(-1);$('#nx').onclick=()=>step(1);
+
+/* ---- optional ambient sound (off by default; starts only on click) ---- */
+let ac,gn,on=false;
+$('#snd').onclick=e=>{on=!on;e.currentTarget.setAttribute('aria-pressed',on);
+  if(on&&!ac){ac=new(window.AudioContext||window.webkitAudioContext)();gn=ac.createGain();gn.gain.value=0;const f=ac.createBiquadFilter();f.frequency.value=400;
+    [55,82.4,110.3].forEach(v=>{const o=ac.createOscillator();o.frequency.value=v;o.connect(f);o.start()});f.connect(gn);gn.connect(ac.destination)}
+  if(ac){on?ac.resume():0;gn.gain.setTargetAtTime(on?.06:0,ac.currentTime,.6);if(!on)setTimeout(()=>{if(!on)ac.suspend()},1500)}};
+
+/* ---- contact form (formsubmit.co, as in the original) ---- */
+$('#form').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,st=$('#st');st.textContent='Transmitting…';
+  try{const r=await fetch(f.action,{method:'POST',headers:{Accept:'application/json'},body:new FormData(f)});if(!r.ok)throw 0;st.textContent='Message sent. I will reply soon.';f.reset()}
+  catch{st.textContent='Send failed — email saifali15874@gmail.com directly.'}});
+</script>
+</body>
+</html>
