@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saif Ali — Biotechnology &amp; Bioinformatics Portfolio</title>
+<meta name="description" content="Saif Ali — BS Biotechnology student at IIUI, Pakistan. Bioinformatics enthusiast with hands-on experience in genomics, PCR, primer design and computational biology.">
+<meta name="keywords" content="Bioinformatics, Biotechnology, Computational Genomics, CRISPR, Pakistan, IIUI, Saif Ali">
+<meta name="author" content="Saif Ali">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Saif Ali — Biotechnology &amp; Bioinformatics">
+<meta property="og:description" content="BS Biotechnology student at IIUI exploring computational genomics, PCR and bioinformatics.">
+<meta property="og:image" content="saif-ali-logo.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Saif Ali — Biotechnology &amp; Bioinformatics">
+<meta name="twitter:description" content="BS Biotechnology student at IIUI exploring computational genomics, PCR and bioinformatics.">
+<meta name="twitter:image" content="saif-ali-logo.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2300e5ff%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%239d4edd%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ctext%20x%3D%2732%27%20y%3D%2733%27%20text-anchor%3D%27middle%27%20dominant-baseline%3D%27central%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%20font-size%3D%2728%27%20letter-spacing%3D%27-1%27%20fill%3D%27%23060a1a%27%3ESA%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2300e5ff%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%239d4edd%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ctext%20x%3D%2732%27%20y%3D%2733%27%20text-anchor%3D%27middle%27%20dominant-baseline%3D%27central%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%20font-size%3D%2728%27%20letter-spacing%3D%27-1%27%20fill%3D%27%23060a1a%27%3ESA%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#060a1a">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="preloader" aria-hidden="true">
+  <svg viewBox="0 0 64 64" fill="none">
+    <g class="helix-strand">
+      <path d="M20 6 C40 16, 24 32, 20 42 C16 52, 40 52, 44 58" stroke="#00e5ff" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M44 6 C24 16, 40 32, 44 42 C48 52, 24 52, 20 58" stroke="#9d4edd" stroke-width="2.4" stroke-linecap="round"/>
+      <line x1="20" y1="10" x2="44" y2="10" stroke="#39ff14" stroke-width="1.6" opacity=".8"/>
+      <line x1="22" y1="22" x2="42" y2="20" stroke="#39ff14" stroke-width="1.6" opacity=".6"/>
+      <line x1="17" y1="34" x2="47" y2="36" stroke="#39ff14" stroke-width="1.6" opacity=".6"/>
+      <line x1="20" y1="48" x2="44" y2="48" stroke="#39ff14" stroke-width="1.6" opacity=".8"/>
+    </g>
+  </svg>
+  <span class="pre-label">LOADING SEQUENCE…</span>
+</div>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Open navigation" aria-expanded="false">
+  <i class="fa-solid fa-bars"></i>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar" aria-label="Primary">
+    <div class="brand">
+      <div class="brand-mark">SA</div>
+      <div class="brand-text">
+        <strong>Saif Ali</strong>
+        <span>Biotechnology · IIUI</span>
+      </div>
+    </div>
+
+    <ul class="nav-list" id="navList" role="tablist" aria-orientation="vertical">
+      <div class="nav-glow" id="navGlow"></div>
+      <li role="presentation"><a href="#home" class="nav-item" role="tab" data-tab="home" aria-current="page"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li role="presentation"><a href="#about" class="nav-item" role="tab" data-tab="about"><i class="fa-solid fa-user"></i>About</a></li>
+      <li role="presentation"><a href="#experience" class="nav-item" role="tab" data-tab="experience"><i class="fa-solid fa-briefcase"></i>Experience</a></li>
+      <li role="presentation"><a href="#projects" class="nav-item" role="tab" data-tab="projects"><i class="fa-solid fa-flask"></i>Projects</a></li>
+      <li role="presentation"><a href="#skills" class="nav-item" role="tab" data-tab="skills"><i class="fa-solid fa-chart-simple"></i>Skills</a></li>
+      <li role="presentation"><a href="#contact" class="nav-item" role="tab" data-tab="contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+    </ul>
+
+    <div class="sidebar-foot">
+      <a class="foot-link" href="https://linkedin.com/in/saif-ali-421b20369" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="foot-link" href="mailto:saifali15874@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <!-- ============ HOME ============ -->
+    <section class="panel active" id="panel-home" data-panel="home">
+      <div class="hero">
+        <div>
+          <div class="hero-eyebrow"><span class="dot"></span>Available for research &amp; internship roles</div>
+          <h1 id="heroName">Saif Ali</h1>
+          <div class="typed-role"><span id="typedRoles"></span></div>
+          <p class="hero-bio">BS Biotechnology student at IIUI, building a bridge between wet-lab genomics and computational biology — from primer design to Python-driven analysis.</p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary js-tab-link" data-tab="projects"><i class="fa-solid fa-diagram-project"></i>View Projects</a>
+            <a href="#contact" class="btn btn-ghost js-tab-link" data-tab="contact"><i class="fa-solid fa-paper-plane"></i>Contact Me</a>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <div class="portrait-ring"></div>
+          <div class="portrait">
+            <img src="saif-ali.jpg" alt="Portrait of Saif Ali" onerror="this.style.display='none';this.parentElement.querySelector('.fallback').style.display='flex';">
+            <div class="fallback" style="display:none;">SA</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card"><div class="stat-num" data-count="3">0</div><div class="stat-label">Internships completed</div></div>
+        <div class="stat-card"><div class="stat-num" data-count="6">0</div><div class="stat-label">Projects &amp; reports</div></div>
+        <div class="stat-card"><div class="stat-num" data-count="4">0</div><div class="stat-label">Labs trained in</div></div>
+        <div class="stat-card"><div class="stat-num" data-count="4">0</div><div class="stat-label">Years of BS Biotechnology</div></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="panel" id="panel-about" data-panel="about">
+      <div class="eyebrow-tag"><i class="fa-solid fa-dna"></i>About</div>
+      <div class="section-head">
+        <h2>The person behind the pipette and the terminal</h2>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <div class="about-bio">
+            <p>I'm a <strong>BS Biotechnology</strong> student at the International Islamic University, Islamabad, driven by a desire to integrate computational tools with biological research. Most of my current focus sits at the intersection of <strong>bioinformatics</strong> and <strong>computational genomics</strong> — using data to ask better biological questions.</p>
+            <p>I've picked up hands-on experience at <strong>NIGAB-NARC</strong>, <strong>PCSIR</strong>, and the <strong>NIH Pakistan</strong>, working across DNA extraction, gel electrophoresis, PCR and primer design, while building parallel comfort with Python and R for biological data.</p>
+          </div>
+
+          <div class="side-block" style="margin-top:34px;">
+            <h3><i class="fa-solid fa-microscope"></i>Research interests</h3>
+            <div class="chip-row">
+              <span class="chip">Bioinformatics &amp; Computational Genomics</span>
+              <span class="chip">Machine Learning in Biology</span>
+              <span class="chip">Computational Drug Discovery</span>
+              <span class="chip">CRISPR &amp; Genome Editing</span>
+              <span class="chip">NGS Data Analysis</span>
+              <span class="chip">R Programming for Omics</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="side-block">
+            <h3><i class="fa-solid fa-graduation-cap"></i>Education</h3>
+            <div class="timeline">
+              <div class="tl-item">
+                <h4>BS Biotechnology</h4>
+                <span>International Islamic University, Islamabad · Sept 2023 – Sept 2027 (expected)</span>
+              </div>
+              <div class="tl-item">
+                <h4>FSc Pre-Medical</h4>
+                <span>Higher secondary education</span>
+              </div>
+              <div class="tl-item">
+                <h4>Matriculation</h4>
+                <span>Secondary school</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-block">
+            <h3><i class="fa-solid fa-address-card"></i>Contact</h3>
+            <ul class="contact-list">
+              <li><i class="fa-solid fa-envelope"></i>saifali15874@gmail.com</li>
+              <li><i class="fa-brands fa-linkedin-in"></i>linkedin.com/in/saif-ali-421b20369</li>
+              <li><i class="fa-solid fa-location-dot"></i>Jhelum, Punjab, Pakistan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="panel" id="panel-experience" data-panel="experience">
+      <div class="eyebrow-tag"><i class="fa-solid fa-vial"></i>Experience</div>
+      <div class="section-head">
+        <h2>Internships &amp; lab rotations</h2>
+        <p>Three placements across genomics, health sciences and multi-disciplinary lab work.</p>
+      </div>
+
+      <div class="exp-timeline">
+        <div class="exp-item">
+          <div class="exp-dot"><i class="fa-solid fa-dna"></i></div>
+          <div class="glass-card exp-card">
+            <div class="exp-top">
+              <div><div class="exp-org">NIGAB — National Institute for Genomics &amp; Advanced Biotechnology, NARC</div><div class="exp-role">Genomics Research Intern</div></div>
+              <div class="exp-dates">Jul – Sep 2026</div>
+            </div>
+            <div class="exp-sup">Supervisor: <strong>Dr. Zaheer Abbas</strong></div>
+            <ul class="exp-bullets">
+              <li>Designed and validated PCR primers for the <em>OsARF11</em> gene using Primer-BLAST and NCBI databases.</li>
+              <li>Ran gel electrophoresis to confirm amplification products and assess primer specificity.</li>
+              <li>Performed DNA extraction and PCR optimization across multiple rice genotype samples.</li>
+              <li>Documented protocols and results for genomics workflows under supervisor review.</li>
+            </ul>
+            <div class="chip-row">
+              <span class="chip">Genomics</span><span class="chip">Primer Design</span><span class="chip">PCR</span><span class="chip">Gel Electrophoresis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="glass-card exp-card">
+            <div class="exp-top">
+              <div><div class="exp-org">National Institutes of Health (NIH), Pakistan</div><div class="exp-role">Health Sciences Intern</div></div>
+              <div class="exp-dates">Jul – Aug 2026</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Rotated through health sciences laboratories, observing diagnostic and research workflows.</li>
+              <li>Assisted with sample handling and basic lab documentation practices.</li>
+              <li>Gained exposure to public-health-oriented lab operations and quality standards.</li>
+            </ul>
+            <div class="chip-row">
+              <span class="chip">Health Sciences</span><span class="chip">Lab Operations</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot"><i class="fa-solid fa-flask-vial"></i></div>
+          <div class="glass-card exp-card">
+            <div class="exp-top">
+              <div><div class="exp-org">PCSIR — Pakistan Council of Scientific &amp; Industrial Research</div><div class="exp-role">Multi-Lab Rotation Intern</div></div>
+              <div class="exp-dates">Mar 2026 · 8 weeks</div>
+            </div>
+            <div class="exp-sup">Supervisors: <strong>Mrs. Razia Kalsoom</strong>, <strong>Dr. Fouzia Noureen</strong>, <strong>Miss Fouzia Hussain</strong>, <strong>Dr. Uzma Rashid</strong></div>
+            <ul class="exp-bullets">
+              <li>Rotated across multiple analytical and microbiology labs over an 8-week placement.</li>
+              <li>Practiced titration, NanoDrop quantification, and general instrumental analysis techniques.</li>
+              <li>Learned media preparation and core microbiology handling protocols.</li>
+              <li>Compiled a multi-lab techniques report summarizing methods and findings.</li>
+            </ul>
+            <div class="chip-row">
+              <span class="chip">Analytical Chemistry</span><span class="chip">Microbiology</span><span class="chip">Instrumentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="panel" id="panel-projects" data-panel="projects">
+      <div class="eyebrow-tag"><i class="fa-solid fa-flask-vial"></i>Projects</div>
+      <div class="section-head">
+        <h2>Reports, studies &amp; ongoing work</h2>
+        <p>Click a card to flip it and read the details.</p>
+      </div>
+
+      <div class="proj-controls">
+        <div class="filter-row" id="filterRow">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Research">Research</button>
+          <button class="filter-btn" data-filter="Internship">Internship</button>
+          <button class="filter-btn" data-filter="Molecular">Molecular</button>
+          <button class="filter-btn" data-filter="ML">ML</button>
+        </div>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="projSearch" placeholder="Search projects…" aria-label="Search projects">
+        </div>
+      </div>
+
+      <div class="proj-grid" id="projGrid">
+
+        <div class="proj-card-outer" data-cat="Research" data-title="dengue fever awareness survey">
+          <div class="proj-card-inner">
+            <div class="glass-card proj-face proj-front">
+              <span class="proj-tag">Research</span>
+              <h4>Dengue Fever Awareness Survey</h4>
+              <p>Community-level survey assessing public knowledge and prevention practices around dengue fever.</p>
+              <span class="proj-hint"><i class="fa-solid fa-rotate"></i>Click to flip</span>
+            </div>
+            <div class="glass-card proj-face proj-back">
+              <p>Designed and distributed a structured questionnaire to evaluate awareness of dengue transmission, symptoms and prevention within the local community, then analyzed responses to identify knowledge gaps.</p>
+              <div class="proj-tags-mini"><span class="chip">Survey Design</span><span class="chip">Public Health</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card-outer" data-cat="Molecular" data-title="cas12a cpf1 nuclease study">
+          <div class="proj-card-inner">
+            <div class="glass-card proj-face proj-front">
+              <span class="proj-tag">Molecular</span>
+              <h4>Cas12a (Cpf1) Nuclease Study</h4>
+              <p>Literature-based study on the structure, mechanism and applications of the Cas12a nuclease in genome editing.</p>
+              <span class="proj-hint"><i class="fa-solid fa-rotate"></i>Click to flip</span>
+            </div>
+            <div class="glass-card proj-face proj-back">
+              <p>Reviewed how Cas12a's single RNA-guided nuclease mechanism differs from Cas9, its staggered-cut DNA repair implications, and its growing role in diagnostics and genome engineering.</p>
+              <div class="proj-tags-mini"><span class="chip">CRISPR</span><span class="chip">Genome Editing</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card-outer" data-cat="Internship" data-title="pcsir lab techniques report">
+          <div class="proj-card-inner">
+            <div class="glass-card proj-face proj-front">
+              <span class="proj-tag">Internship</span>
+              <h4>PCSIR Lab Techniques Report</h4>
+              <p>Consolidated report covering the analytical and microbiology techniques practiced during the PCSIR rotation.</p>
+              <span class="proj-hint"><i class="fa-solid fa-rotate"></i>Click to flip</span>
+            </div>
+            <div class="glass-card proj-face proj-back">
+              <p>Documented titration procedures, NanoDrop quantification, media preparation and instrumentation basics across the 8-week, multi-lab PCSIR rotation.</p>
+              <div class="proj-tags-mini"><span class="chip">Analytical Chemistry</span><span class="chip">Reporting</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card-outer" data-cat="Internship" data-title="nigab genomics report">
+          <div class="proj-card-inner">
+            <div class="glass-card proj-face proj-front">
+              <span class="proj-tag">Internship</span>
+              <h4>NIGAB Genomics Report</h4>
+              <p>Summary report of primer design and PCR-based genomics work carried out at NIGAB-NARC.</p>
+              <span class="proj-hint"><i class="fa-solid fa-rotate"></i>Click to flip</span>
+            </div>
+            <div class="glass-card proj-face proj-back">
+              <p>Detailed the primer design workflow for OsARF11 using Primer-BLAST, the PCR optimization steps taken, and gel electrophoresis results confirming amplification.</p>
+              <div class="proj-tags-mini"><span class="chip">Genomics</span><span class="chip">PCR</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card-outer" data-cat="ML" data-title="ml in bioinformatics">
+          <div class="proj-card-inner">
+            <div class="glass-card proj-face proj-front">
+              <span class="proj-tag">ML</span>
+              <h4>ML in Bioinformatics</h4>
+              <p>Exploring machine learning approaches applied to biological and genomic datasets.</p>
+              <span class="proj-hint"><i class="fa-solid fa-rotate"></i>Click to flip</span>
+            </div>
+            <div class="glass-card proj-face proj-back">
+              <p>Currently studying how classification and clustering methods can be applied to genomic and expression data as a foundation for future computational biology work.</p>
+              <div class="proj-status"><i class="fa-solid fa-circle-dot"></i> In progress</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card-outer" data-cat="ML" data-title="r programming for biological data">
+          <div class="proj-card-inner">
+            <div class="glass-card proj-face proj-front">
+              <span class="proj-tag">ML</span>
+              <h4>R Programming for Biological Data</h4>
+              <p>Building fluency in R for statistical analysis and visualization of biological datasets.</p>
+              <span class="proj-hint"><i class="fa-solid fa-rotate"></i>Click to flip</span>
+            </div>
+            <div class="glass-card proj-face proj-back">
+              <p>Working through R fundamentals — data wrangling, statistical tests and plotting — with a focus on applying them to omics-style datasets.</p>
+              <div class="proj-status"><i class="fa-solid fa-circle-dot"></i> In progress</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="panel" id="panel-skills" data-panel="skills">
+      <div class="eyebrow-tag"><i class="fa-solid fa-gauge-high"></i>Skills</div>
+      <div class="section-head">
+        <h2>Lab, computational &amp; analytical toolkit</h2>
+      </div>
+
+      <div class="skills-layout">
+        <div>
+          <div class="skill-group">
+            <h3>Lab Techniques</h3>
+            <div class="skill-row" data-value="95"><div class="skill-top"><span>DNA Extraction (CTAB)</span><span>95%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="95"><div class="skill-top"><span>Agarose Gel Preparation</span><span>95%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="90"><div class="skill-top"><span>Gel Electrophoresis</span><span>90%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="85"><div class="skill-top"><span>PCR</span><span>85%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="85"><div class="skill-top"><span>Primer Designing</span><span>85%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="80"><div class="skill-top"><span>Media Preparation</span><span>80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="70"><div class="skill-top"><span>qPCR</span><span>70%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="65"><div class="skill-top"><span>Tissue Culture</span><span>65%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Bioinformatics</h3>
+            <div class="skill-row" data-value="85"><div class="skill-top"><span>Primer-BLAST / NCBI</span><span>85%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="80"><div class="skill-top"><span>SnapGene</span><span>80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="80"><div class="skill-top"><span>Computational Genomics</span><span>80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="70"><div class="skill-top"><span>Bioinformatics Tools</span><span>70%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="70"><div class="skill-top"><span>Data Analysis</span><span>70%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="65"><div class="skill-top"><span>R Basics</span><span>65%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Programming</h3>
+            <div class="skill-row" data-value="75"><div class="skill-top"><span>Python</span><span>75%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="80"><div class="skill-top"><span>MS Excel</span><span>80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="65"><div class="skill-top"><span>AutoDock</span><span>65%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="50"><div class="skill-top"><span>Machine Learning</span><span>50%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="60"><div class="skill-top"><span>CAD</span><span>60%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Analytical</h3>
+            <div class="skill-row" data-value="80"><div class="skill-top"><span>NanoDrop</span><span>80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="80"><div class="skill-top"><span>Titration</span><span>80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="65"><div class="skill-top"><span>HPLC</span><span>65%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="65"><div class="skill-top"><span>ICP-OES / ICP-MS</span><span>65%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+            <div class="skill-row" data-value="50"><div class="skill-top"><span>NGS Analysis</span><span>50%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          </div>
+        </div>
+
+        <div class="glass-card radar-card">
+          <h3 style="font-size:1rem;margin-bottom:14px;">Skill overview</h3>
+          <canvas id="radarChart" width="320" height="320"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="panel" id="panel-contact" data-panel="contact">
+      <div class="eyebrow-tag"><i class="fa-solid fa-paper-plane"></i>Contact</div>
+      <div class="section-head">
+        <h2>Let's talk research, internships or collaboration</h2>
+      </div>
+
+      <div class="contact-layout">
+        <form class="glass-card" id="contactForm" action="https://formsubmit.co/ajax/saifali15874@gmail.com" method="POST" novalidate>
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name">
+            <div class="field-error" id="err-name"></div>
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email">
+            <div class="field-error" id="err-email"></div>
+          </div>
+          <div class="form-row">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject">
+            <div class="field-error" id="err-subject"></div>
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message"></textarea>
+            <div class="field-error" id="err-message"></div>
+          </div>
+          <input type="hidden" name="_subject" value="New portfolio message from Saif Ali's site">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+          <button type="submit" class="btn btn-primary" id="cf-submit"><i class="fa-solid fa-paper-plane"></i>Send Message</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+
+        <div class="contact-side">
+          <div class="side-block">
+            <h3><i class="fa-solid fa-address-card"></i>Direct contact</h3>
+            <ul class="contact-list">
+              <li><i class="fa-solid fa-envelope"></i>saifali15874@gmail.com</li>
+              <li><i class="fa-solid fa-location-dot"></i>Jhelum, Punjab, Pakistan</li>
+            </ul>
+          </div>
+          <div class="side-block">
+            <h3><i class="fa-solid fa-share-nodes"></i>Elsewhere</h3>
+            <div class="social-row">
+              <a class="social-btn" href="https://linkedin.com/in/saif-ali-421b20369" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+              <a class="social-btn" href="mailto:saifali15874@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>© 2026 Saif Ali. Built with care.</span>
+        <span>Jhelum, Punjab, Pakistan</span>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
