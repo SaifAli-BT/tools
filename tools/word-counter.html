@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="claude:viewport-fit-sides" content="cover"><title>Word Counter – Free Online | Saif's Toolkit</title><meta name="description" content="Count words, characters, sentences and paragraphs as you type, with reading time and top keywords."><link rel="canonical" href="https://saif-ali.me/tools/word-counter.html"><meta property="og:title" content="Word Counter – Free Online | Saif's Toolkit"><meta property="og:description" content="Count words, characters, sentences and paragraphs as you type, with reading time and top keywords."><meta name="theme-color" content="#E4570F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap"><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js"></script></head><body>
+<header class="top"><div class="wrap top-in"><a class="brand" href="index.html"><span class="brand-mark"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M4 4l5 5M3 8l1 1M8 3l1 1"/></svg></span><span>Toolkit<small>saif-ali.me/tools</small></span></a><nav class="nav"><a href="index.html">All tools</a><a class="hide-sm" href="/">About</a><button id="themeToggle" class="icon-btn" aria-label="Switch light or dark mode"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/></svg></button></nav></div></header>
+<main><div class="wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">All tools</a><span>/</span><a href="index.html#text">Text tools</a></nav><div class="tool-head c-text"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><div><h1>Word Counter</h1><p class="lede">Count words, characters, sentences and paragraphs as you type, with reading time and top keywords.</p></div></div><p class="private"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg> Free, instant, runs in your browser</p><section class="panel" aria-label="Word Counter"><div class="stats" id="stats"></div>
+<div class="field"><label for="t">Your text</label><textarea id="t" rows="12">Bioinformatics combines biology, computer science and statistics to make sense of large biological datasets. Researchers use it to compare DNA sequences, predict protein structures and find genes linked to disease.
+
+Students in Pakistan can start learning it for free. Online courses, open databases like NCBI and free tools make it easier than ever. Practice a little every day and build small projects!</textarea></div>
+<div class="actions"><button class="btn" id="copy"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg> Copy text</button><button class="btn" id="clear">Clear</button><span class="hint">Sample text loaded. Paste your own to replace it.</span></div>
+<div class="field"><span class="lbl">Most used words</span><div class="actions" id="kw"></div></div></section><ol class="howto"><li>Paste or type your text</li><li>Counts update instantly</li><li>Check keywords at the bottom</li></ol><section class="related"><h2>More text tools</h2><div class="grid"><a class="card c-text" href="case-converter.html" data-k="case converter uppercase, lowercase, title case and more. uppercase lowercase title capital letters text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Case Converter</h3><p>UPPERCASE, lowercase, Title Case and more.</p></span></a><a class="card c-text" href="text-cleaner.html" data-k="text cleaner fix extra spaces and broken lines from pdfs. remove spaces line breaks clean format pdf copy text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Text Cleaner</h3><p>Fix extra spaces and broken lines from PDFs.</p></span></a><a class="card c-text" href="text-compare.html" data-k="text compare highlight differences between two texts. diff difference compare check changes text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Text Compare</h3><p>Highlight differences between two texts.</p></span></a></div></section></div></main><footer class="foot"><div class="wrap"><span>© <span id="year">2026</span> Toolkit by <a href="/">Saif Ali</a></span><span>Free, no sign-up. Everything runs in your browser.</span></div></footer>
+<script>
+
+const STOP = new Set('the a an and or but of to in on at for with is are was were be been it its this that these those as by from can will i you he she we they them his her our your their not no so if than then there here have has had do does did make easier ever more most use'.split(' '));
+const t = $('#t');
+function stat(v, k) { return '<div class="stat"><div class="v">' + v + '</div><div class="k">' + k + '</div></div>'; }
+function upd() {
+  const s = t.value, words = s.match(/\S+/g) || [];
+  const sentences = (s.match(/[^.!?\n]+[.!?]+/g) || []).length || (s.trim() ? 1 : 0);
+  const paras = s.split(/\n\s*\n/).filter(p => p.trim()).length;
+  const mins = w => { const m = w / 1; if (!w) return '0 sec'; const sec = Math.round(words.length / w * 60); return sec < 60 ? sec + ' sec' : Math.floor(sec / 60) + ' min ' + (sec % 60) + ' s'; };
+  $('#stats').innerHTML = stat(words.length.toLocaleString(), 'Words') + stat(s.length.toLocaleString(), 'Characters') +
+    stat(s.replace(/\s/g, '').length.toLocaleString(), 'Without spaces') + stat(sentences, 'Sentences') + stat(paras, 'Paragraphs') +
+    stat(mins(238), 'Reading time') + stat(mins(130), 'Speaking time');
+  const freq = {};
+  words.forEach(w => { w = w.toLowerCase().replace(/[^\p{L}\p{N}'-]/gu, ''); if (w.length > 2 && !STOP.has(w)) freq[w] = (freq[w] || 0) + 1; });
+  const top = Object.entries(freq).sort((a, b) => b[1] - a[1]).slice(0, 10);
+  $('#kw').innerHTML = top.length ? top.map(([w, n]) => '<span class="chip" style="cursor:default">' + esc(w) + ' <span class="mono hint">' + n + '</span></span>').join('') : '<span class="hint">Type something to see keywords.</span>';
+  store('tk-wc', s);
+}
+const saved = store('tk-wc'); if (saved) t.value = saved;
+t.oninput = upd; upd();
+$('#copy').onclick = () => copyText(t.value, t);
+$('#clear').onclick = () => { t.value = ''; upd(); t.focus(); };
+
+</script>
+</body></html>
