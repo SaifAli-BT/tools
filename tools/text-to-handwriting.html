@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="claude:viewport-fit-sides" content="cover"><title>Text to Handwriting – Free Online | Saif's Toolkit</title><meta name="description" content="Turn typed text into natural-looking handwriting on ruled paper, with a scanned or phone-photo finish. Download as PDF."><link rel="canonical" href="https://saif-ali.me/tools/text-to-handwriting.html"><meta property="og:title" content="Text to Handwriting – Free Online | Saif's Toolkit"><meta property="og:description" content="Turn typed text into natural-looking handwriting on ruled paper, with a scanned or phone-photo finish. Download as PDF."><meta name="theme-color" content="#E4570F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Kalam&family=Shadows+Into+Light+Two&family=Covered+By+Your+Grace&family=Nothing+You+Could+Do&family=Homemade+Apple&family=Zeyada&display=swap"><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js"></script></head><body>
+<header class="top"><div class="wrap top-in"><a class="brand" href="index.html"><span class="brand-mark"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M4 4l5 5M3 8l1 1M8 3l1 1"/></svg></span><span>Toolkit<small>saif-ali.me/tools</small></span></a><nav class="nav"><a href="index.html">All tools</a><a class="hide-sm" href="/">About</a><button id="themeToggle" class="icon-btn" aria-label="Switch light or dark mode"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/></svg></button></nav></div></header>
+<main><div class="wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">All tools</a><span>/</span><a href="index.html#text">Text tools</a></nav><div class="tool-head c-text"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><div><h1>Text to Handwriting</h1><p class="lede">Turn typed text into natural-looking handwriting on ruled paper, with a scanned or phone-photo finish. Download as PDF.</p></div></div><p class="private"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg> Free, instant, runs in your browser</p><section class="panel" aria-label="Text to Handwriting"><div class="cols" style="align-items:start">
+ <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+  <div class="field"><label for="title">Heading (optional)</label><input type="text" id="title" value="Photosynthesis"></div>
+  <div class="field"><label for="topline">Top line on page 1 (optional)</label><input type="text" id="topline" value=""></div>
+  <div class="field"><label for="txt">Your text</label><textarea id="txt" rows="12">Photosynthesis is the process by which green plants make their own food. They use sunlight, water and carbon dioxide to produce glucose, and oxygen is released as a by-product.
+This process takes place in the chloroplasts, which contain a green pigment called chlorophyll. Chlorophyll absorbs light energy, mostly from the red and blue parts of the spectrum.
+Photosynthesis has two main stages: the light-dependent reactions and the Calvin cycle. Without it, there would be no oxygen in the air and no food for animals or humans.</textarea>
+   <span class="hint">Each new line starts a new paragraph. Leave an empty line to skip a ruled line. English letters only.</span></div>
+ </div>
+ <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+  <div class="field"><label for="style">Handwriting</label><select id="style">
+    <option value="neat">Neat student</option><option value="round">Rounded print</option><option value="quick">Quick notes</option>
+    <option value="casual">Casual</option><option value="messy">Messy print</option><option value="cursive">Cursive</option><option value="fast">Fast cursive</option></select></div>
+  <div class="cols">
+   <div class="field"><label for="ink">Pen</label><select id="ink"><option value="#1d2f8c">Blue ballpoint</option><option value="#0b3cc4">Blue gel</option><option value="#1e1e24">Black</option></select></div>
+   <div class="field"><label for="paper">Paper</label><select id="paper"><option value="ruled">Ruled with margin</option><option value="margin">Margin only</option><option value="plain">Plain white</option></select></div>
+   <div class="field"><label for="size">Writing size</label><select id="size"><option value="44">Small</option><option value="52" selected>Medium</option><option value="60">Large</option></select></div>
+   <div class="field"><label for="look">Final look</label><select id="look"><option value="none">Clean</option><option value="scan" selected>Scanned</option><option value="photo">Phone photo</option></select></div>
+  </div>
+  <div class="field"><label for="mess">Natural variation: <span id="messv" class="mono">medium</span></label><input type="range" id="mess" min="0" max="100" value="45"></div>
+  <div class="checks">
+   <label class="check"><input type="checkbox" id="indent" checked> Indent paragraphs</label>
+   <label class="check"><input type="checkbox" id="fix"> A few crossed-out mistakes</label>
+   <label class="check"><input type="checkbox" id="pnum"> Page numbers</label>
+  </div>
+  <div class="actions"><button class="btn" id="seed"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg> Rewrite differently</button></div>
+  <div class="actions"><button class="btn btn-primary btn-lg" id="pdf"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Download PDF</button><button class="btn btn-lg" id="img">Images</button></div>
+  <p class="hint" id="status"></p>
+ </div>
+</div>
+<div class="field"><span class="lbl" id="plbl">Preview</span><div id="pages" style="display:flex;flex-direction:column;align-items:center;gap:18px;background:var(--sunk);border-radius:12px;padding:16px"></div></div></section><ol class="howto"><li>Type or paste your text</li><li>Pick handwriting, pen and paper</li><li>Download the PDF</li></ol><section class="related"><h2>More text tools</h2><div class="grid"><a class="card c-text" href="word-counter.html" data-k="word counter count words, characters and reading time. count words characters essay assignment limit text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Word Counter</h3><p>Count words, characters and reading time.</p></span></a><a class="card c-text" href="case-converter.html" data-k="case converter uppercase, lowercase, title case and more. uppercase lowercase title capital letters text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Case Converter</h3><p>UPPERCASE, lowercase, Title Case and more.</p></span></a><a class="card c-text" href="text-cleaner.html" data-k="text cleaner fix extra spaces and broken lines from pdfs. remove spaces line breaks clean format pdf copy text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Text Cleaner</h3><p>Fix extra spaces and broken lines from PDFs.</p></span></a><a class="card c-text" href="text-compare.html" data-k="text compare highlight differences between two texts. diff difference compare check changes text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Text Compare</h3><p>Highlight differences between two texts.</p></span></a></div></section></div></main><footer class="foot"><div class="wrap"><span>© <span id="year">2026</span> Toolkit by <a href="/">Saif Ali</a></span><span>Free, no sign-up. Everything runs in your browser.</span></div></footer>
+<script>
+
+const STY = {
+  neat:   { f: 'Caveat', w: 500, k: 1.22, cur: false },
+  round:  { f: 'Kalam', w: 400, k: 0.9, cur: false },
+  quick:  { f: 'Shadows Into Light Two', w: 400, k: 1.0, cur: false },
+  casual: { f: 'Covered By Your Grace', w: 400, k: 1.08, cur: false },
+  messy:  { f: 'Nothing You Could Do', w: 400, k: 0.86, cur: false },
+  cursive:{ f: 'Homemade Apple', w: 400, k: 0.76, cur: true },
+  fast:   { f: 'Zeyada', w: 400, k: 1.3, cur: true },
+};
+const W = 1240, H = 1754, TOP = 205, LEFT_LINE = 165, RIGHT = W - 72, BOTTOM = H - 120;
+let seed = 7, outs = [], tex = null;
+const d8 = new Date(); $('#topline').value = 'Date: ' + String(d8.getDate()).padStart(2, '0') + '-' + String(d8.getMonth() + 1).padStart(2, '0') + '-' + d8.getFullYear();
+
+function mulberry(a) { return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+function texture() {
+  if (tex) return tex;
+  tex = document.createElement('canvas'); tex.width = W; tex.height = H;
+  const x = tex.getContext('2d'), r = mulberry(99);
+  x.fillStyle = '#fbfaf4'; x.fillRect(0, 0, W, H);
+  const g = x.createRadialGradient(W * .45, H * .4, 200, W / 2, H / 2, H * .8);
+  g.addColorStop(0, 'rgba(255,255,255,.5)'); g.addColorStop(1, 'rgba(225,220,205,.35)'); x.fillStyle = g; x.fillRect(0, 0, W, H);
+  for (let i = 0; i < 9000; i++) { x.fillStyle = 'rgba(90,80,60,' + (0.015 + r() * 0.04) + ')'; x.fillRect(r() * W, r() * H, 1 + r() * 1.4, 1 + r() * 1.4); }
+  for (let i = 0; i < 70; i++) { x.strokeStyle = 'rgba(120,110,90,.05)'; x.lineWidth = .6; x.beginPath(); const px = r() * W, py = r() * H; x.moveTo(px, py); x.quadraticCurveTo(px + r() * 30, py + r() * 10, px + 20 + r() * 40, py + (r() - .5) * 14); x.stroke(); }
+  return tex;
+}
+
+function newPage(o, n) {
+  const c = document.createElement('canvas'); c.width = W; c.height = H; const x = c.getContext('2d');
+  x.drawImage(texture(), 0, 0);
+  if (o.paper === 'ruled') {
+    x.strokeStyle = 'rgba(120,155,205,.75)'; x.lineWidth = 1.6;
+    for (let y = TOP; y < H - 60; y += o.LG) { x.beginPath(); x.moveTo(0, y); x.lineTo(W, y); x.stroke(); }
+  }
+  if (o.paper !== 'plain') {
+    x.strokeStyle = 'rgba(214,96,110,.8)'; x.lineWidth = 2;
+    x.beginPath(); x.moveTo(LEFT_LINE, 0); x.lineTo(LEFT_LINE, H); x.stroke();
+    x.beginPath(); x.moveTo(0, TOP - o.LG * 1.05); x.lineTo(W, TOP - o.LG * 1.05); x.stroke();
+  }
+  x.font = o.font; x.fillStyle = o.ink; x.textBaseline = 'alphabetic';
+  return { c, x, n };
+}
+
+function ink(x, t, px, py, o) {
+  const a = o.alpha * (0.84 + o.r() * 0.16);
+  x.globalAlpha = a; x.fillText(t, px, py);
+  x.globalAlpha = a * 0.2; x.fillText(t, px + 0.5, py + 0.35);
+  x.globalAlpha = 1;
+}
+
+function drawWord(x, w, px, py, o, m) {
+  const r = o.r, wsc = 1 + (r() - .5) * 0.07 * m, wrot = (r() - .5) * 0.045 * m, wdy = (r() - .5) * 2.6 * m;
+  x.save(); x.translate(px, py + wdy); x.rotate(wrot); x.scale(wsc, wsc);
+  let cx = 0;
+  if (o.cur) { ink(x, w, 0, 0, o); cx = x.measureText(w).width; }
+  else for (const ch of w) {
+    const cw = x.measureText(ch).width, dy = (r() - .5) * 2.4 * m, rot = (r() - .5) * 0.1 * m, sc = 1 + (r() - .5) * 0.1 * m;
+    x.save(); x.translate(cx + cw / 2, dy); x.rotate(rot); x.scale(sc, sc); ink(x, ch, -cw / 2, 0, o); x.restore();
+    cx += cw * (1 + (r() - .5) * 0.07 * m) + (r() - .5) * 1.3 * m;
+  }
+  x.restore();
+  return cx * wsc;
+}
+
+function strike(x, px, py, w, o) {
+  const r = o.r, xh = o.size * 0.32;
+  x.strokeStyle = o.ink; x.lineCap = 'round'; x.globalAlpha = o.alpha * 0.92;
+  for (let i = 0; i < 2; i++) {
+    x.lineWidth = o.size * 0.075 + r() * 1.4; x.beginPath();
+    const y0 = py - xh * (0.45 + r() * 0.35), y1 = py - xh * (0.35 + r() * 0.5);
+    x.moveTo(px - 4 - r() * 4, y0); x.quadraticCurveTo(px + w / 2, (y0 + y1) / 2 + (r() - .5) * 6, px + w + 4 + r() * 5, y1); x.stroke();
+  }
+  x.globalAlpha = 1;
+}
+
+function underline(x, a, b, y, o) {
+  x.strokeStyle = o.ink; x.lineCap = 'round'; x.lineWidth = o.size * 0.05; x.globalAlpha = o.alpha * 0.9; x.beginPath();
+  x.moveTo(a, y); const n = 4; for (let i = 1; i <= n; i++) x.quadraticCurveTo(a + (b - a) * (i - .5) / n, y + (o.r() - .5) * 5, a + (b - a) * i / n, y + (o.r() - .5) * 3);
+  x.stroke(); x.globalAlpha = 1;
+}
+
+function layout() {
+  const s = STY[$('#style').value], LG = +$('#size').value, r = mulberry(seed);
+  const size = Math.round(LG * 0.64 * s.k), mv = +$('#mess').value;
+  const o = { r, LG, size, cur: s.cur, ink: $('#ink').value, paper: $('#paper').value, alpha: 0.93, font: s.w + ' ' + size + 'px "' + s.f + '"' };
+  const M = 0.3 + mv / 100 * 1.7, plain = o.paper === 'plain';
+  const textL = (plain ? 110 : LEFT_LINE) + 22, maxLines = Math.floor((BOTTOM - TOP) / LG);
+  const pages = []; let pg = newPage(o, 1); pages.push(pg);
+  let line = 0;
+  const fix = $('#fix').checked, indent = $('#indent').checked;
+  // header band
+  const top = $('#topline').value.trim();
+  if (top) { const w = pg.x.measureText(top).width; drawWord(pg.x, top, RIGHT - w - 10, TOP - LG * 1.05 - LG * 0.22, o, M * 0.8); }
+  const title = $('#title').value.trim();
+  if (title) {
+    const fs = Math.round(size * 1.18); pg.x.font = s.w + ' ' + fs + 'px "' + s.f + '"';
+    const tw = pg.x.measureText(title).width, tx = Math.max(textL, (textL + RIGHT) / 2 - tw / 2), ty = TOP + LG - LG * 0.16;
+    const adv = drawWord(pg.x, title, tx, ty, o, M * 0.7); underline(pg.x, tx - 4, tx + adv + 6, ty + LG * 0.13, o);
+    pg.x.font = o.font; line = 1;
+  }
+  let ln = { x: textL, slope: 0, drift: 0, start: textL };
+  function startLine(extra) {
+    if (line >= maxLines) { pg = newPage(o, pages.length + 1); pages.push(pg); line = 0; }
+    const m = M * (1 + 0.3 * line / maxLines);
+    ln = { m, slope: (r() - .5) * 0.012 * m * (plain ? 2.2 : 1), drift: 0, start: textL + r() * 7 * m + (extra || 0) };
+    ln.x = ln.start; ln.base = TOP + (line + 1) * LG - LG * 0.16 + (r() - .5) * 2 * m; line++;
+  }
+  const paras = $('#txt').value.replace(/\r/g, '').split('\n');
+  const space = pg.x.measureText(' ').width;
+  for (const p of paras) {
+    if (!p.trim()) { if (line >= maxLines) { pg = newPage(o, pages.length + 1); pages.push(pg); line = 0; } else line++; continue; }
+    startLine(indent ? LG * 0.95 : 0);
+    for (const word of p.trim().split(/\s+/)) {
+      let mistake = fix && word.length >= 4 && /^[A-Za-z]/.test(word) && r() < 0.012 + mv / 100 * 0.01;
+      let att = '';
+      if (mistake) { att = word.slice(0, 2 + Math.floor(r() * 2)); if (r() < .5) att = att.slice(0, -1) + 'aeiounrst'[Math.floor(r() * 9)]; }
+      const est = pg.x.measureText(word).width * 1.05 + (att ? pg.x.measureText(att).width * 1.05 + space : 0);
+      if (ln.x + est > RIGHT && ln.x > ln.start) startLine(0);
+      const y = () => ln.base + ln.slope * (ln.x - textL) + ln.drift;
+      if (att) { const aw = drawWord(pg.x, att, ln.x, y(), o, ln.m); strike(pg.x, ln.x, y(), aw, o); ln.x += aw + space * (0.9 + r() * 0.5); }
+      const adv = drawWord(pg.x, word, ln.x, y(), o, ln.m);
+      ln.x += adv + space * (0.75 + r() * 0.65) * (o.cur ? 1.1 : 1);
+      ln.drift = Math.max(-5 * ln.m, Math.min(5 * ln.m, ln.drift + (r() - .5) * 1.4 * ln.m));
+    }
+  }
+  if ($('#pnum').checked && pages.length > 1) pages.forEach(p => { p.x.font = o.font; const t = String(p.n); drawWord(p.x, t, W / 2 - 8, H - 62, o, M); });
+  return pages.map(p => finish(p.c, $('#look').value, mulberry(seed + p.n * 31)));
+}
+
+function finish(c, look, r) {
+  if (look === 'none') return c;
+  const o = document.createElement('canvas'); o.width = W; o.height = H; const x = o.getContext('2d');
+  if (look === 'scan') {
+    x.fillStyle = '#f4f4f1'; x.fillRect(0, 0, W, H);
+    x.save(); x.translate(W / 2, H / 2); x.rotate((r() - .5) * 0.011); x.translate(-W / 2, -H / 2);
+    x.filter = 'grayscale(0.3) contrast(1.12) brightness(1.03) blur(0.35px)'; x.drawImage(c, 0, 0); x.filter = 'none'; x.restore();
+    let g = x.createLinearGradient(0, 0, 46, 0); g.addColorStop(0, 'rgba(0,0,0,.16)'); g.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = g; x.fillRect(0, 0, 46, H);
+    g = x.createLinearGradient(0, H, 0, H - 30); g.addColorStop(0, 'rgba(0,0,0,.08)'); g.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = g; x.fillRect(0, H - 30, W, 30);
+  } else {
+    x.fillStyle = '#3b3631'; x.fillRect(0, 0, W, H);
+    x.save(); x.translate(W / 2, H / 2); x.rotate((r() - .5) * 0.03); x.scale(0.975, 0.975); x.translate(-W / 2, -H / 2);
+    x.filter = 'sepia(0.16) saturate(0.92) contrast(1.05) brightness(0.98) blur(0.45px)'; x.drawImage(c, 0, 0); x.filter = 'none'; x.restore();
+    const g = x.createLinearGradient(0, 0, W, H); g.addColorStop(0, 'rgba(255,248,230,.06)'); g.addColorStop(0.55, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(40,30,20,.22)');
+    x.fillStyle = g; x.fillRect(0, 0, W, H);
+    const v = x.createRadialGradient(W / 2, H / 2, H * 0.35, W / 2, H / 2, H * 0.75); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.18)'); x.fillStyle = v; x.fillRect(0, 0, W, H);
+  }
+  return o;
+}
+
+let busy = false, again = false;
+async function render() {
+  if (busy) { again = true; return; } busy = true;
+  const s = STY[$('#style').value];
+  try { await document.fonts.load(s.w + ' 40px "' + s.f + '"'); } catch (e) {}
+  if (!document.fonts.check(s.w + ' 40px "' + s.f + '"')) $('#status').textContent = 'Handwriting font is still loading. If this stays, check your internet connection.';
+  else $('#status').textContent = '';
+  outs = layout();
+  const box = $('#pages'); box.innerHTML = '';
+  outs.forEach(c => { c.style.cssText = 'width:100%;max-width:640px;height:auto;box-shadow:0 2px 10px rgba(0,0,0,.18);border-radius:2px'; box.appendChild(c); });
+  $('#plbl').textContent = 'Preview · ' + outs.length + ' page' + (outs.length > 1 ? 's' : '');
+  busy = false; if (again) { again = false; render(); }
+}
+const later = debounce(render, 450);
+$('#mess').addEventListener('input', () => { const v = +$('#mess').value; $('#messv').textContent = v < 25 ? 'low' : v < 60 ? 'medium' : v < 85 ? 'high' : 'very high'; });
+document.querySelector('.panel').addEventListener('input', e => { if (!e.target.closest('#pages')) later(); });
+document.querySelector('.panel').addEventListener('change', e => { if (e.target.matches('select,input[type=checkbox]')) render(); });
+$('#seed').onclick = () => { seed = Math.floor(Math.random() * 1e9); render(); };
+const fname = () => ($('#title').value.trim() || 'assignment').replace(/[^\w\- ]+/g, '').trim().replace(/\s+/g, '-').toLowerCase() || 'assignment';
+$('#pdf').onclick = async () => {
+  $('#pdf').disabled = true; $('#status').textContent = 'Making PDF…';
+  try {
+    await loadScript('pdflib'); const doc = await PDFLib.PDFDocument.create();
+    for (const c of outs) { const j = await doc.embedJpg(await (await canvasToBlob(c, 'image/jpeg', 0.9)).arrayBuffer()); doc.addPage([595.28, 841.89]).drawImage(j, { x: 0, y: 0, width: 595.28, height: 841.89 }); }
+    const b = await doc.save(); download(new Blob([b], { type: 'application/pdf' }), fname() + '.pdf'); $('#status').textContent = 'PDF ready · ' + outs.length + ' pages · ' + fmtBytes(b.length);
+  } catch (e) { $('#status').innerHTML = '<span class="err">' + esc(e.message) + '</span>'; }
+  $('#pdf').disabled = false;
+};
+$('#img').onclick = async () => {
+  if (outs.length === 1) { download(await canvasToBlob(outs[0], 'image/jpeg', 0.92), fname() + '.jpg'); return; }
+  try { await loadScript('jszip'); const z = new JSZip();
+    for (let i = 0; i < outs.length; i++) z.file(fname() + '-page-' + (i + 1) + '.jpg', await canvasToBlob(outs[i], 'image/jpeg', 0.92));
+    download(await z.generateAsync({ type: 'blob' }), fname() + '-pages.zip');
+  } catch (e) { $('#status').innerHTML = '<span class="err">' + esc(e.message) + '</span>'; }
+};
+render();
+
+</script>
+</body></html>

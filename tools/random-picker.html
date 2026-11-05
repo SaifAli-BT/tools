@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="claude:viewport-fit-sides" content="cover"><title>Random Picker – Free Online | Saif's Toolkit</title><meta name="description" content="Pick a random name from a list, generate random numbers, flip a coin or roll dice."><link rel="canonical" href="https://saif-ali.me/tools/random-picker.html"><meta property="og:title" content="Random Picker – Free Online | Saif's Toolkit"><meta property="og:description" content="Pick a random name from a list, generate random numbers, flip a coin or roll dice."><meta name="theme-color" content="#E4570F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap"><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js"></script></head><body>
+<header class="top"><div class="wrap top-in"><a class="brand" href="index.html"><span class="brand-mark"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M4 4l5 5M3 8l1 1M8 3l1 1"/></svg></span><span>Toolkit<small>saif-ali.me/tools</small></span></a><nav class="nav"><a href="index.html">All tools</a><a class="hide-sm" href="/">About</a><button id="themeToggle" class="icon-btn" aria-label="Switch light or dark mode"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/></svg></button></nav></div></header>
+<main><div class="wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">All tools</a><span>/</span><a href="index.html#gen">Generators</a></nav><div class="tool-head c-gen"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v1M14 20h1M18 18h3v3h-3z"/></svg></span><div><h1>Random Picker</h1><p class="lede">Pick a random name from a list, generate random numbers, flip a coin or roll dice.</p></div></div><p class="private"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg> Free, instant, runs in your browser</p><section class="panel" aria-label="Random Picker"><div class="seg" id="tab"><button data-t="names" aria-pressed="true">Pick a name</button><button data-t="nums" aria-pressed="false">Random number</button><button data-t="coin" aria-pressed="false">Coin &amp; dice</button></div>
+<div data-p="names" style="display:flex;flex-direction:column;gap:14px">
+  <div class="cols" style="align-items:start">
+    <div class="field"><label for="names">Names or options, one per line</label><textarea id="names" rows="8">Ahmed
+Ayesha
+Bilal
+Fatima
+Hamza
+Zainab
+Usman</textarea></div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="result" style="text-align:center;padding:28px 18px"><div class="big" id="pick">?</div><div class="sm" id="pickSub">Press Pick to choose</div></div>
+      <button class="btn btn-primary btn-lg" id="go">Pick one</button>
+      <label class="check"><input type="checkbox" id="rm"> Remove the picked name from the list</label>
+    </div>
+  </div>
+  <p class="hint" id="hist"></p>
+</div>
+<div data-p="nums" hidden style="display:flex;flex-direction:column;gap:14px">
+  <div class="cols">
+    <div class="field"><label for="min">From</label><input type="number" id="min" value="1" class="mono"></div>
+    <div class="field"><label for="max">To</label><input type="number" id="max" value="100" class="mono"></div>
+    <div class="field"><label for="cnt">How many</label><input type="number" id="cnt" value="1" min="1" max="1000" class="mono"></div>
+  </div>
+  <label class="check"><input type="checkbox" id="uniq" checked> No repeats</label>
+  <div class="actions"><button class="btn btn-primary btn-lg" id="ngo">Generate</button></div>
+  <div class="result"><div class="big mono" id="nout" style="font-size:clamp(22px,4vw,34px)">—</div></div>
+</div>
+<div data-p="coin" hidden style="display:flex;flex-direction:column;gap:14px">
+  <div class="actions"><button class="btn btn-primary btn-lg" id="flip">Flip a coin</button><button class="btn btn-lg" id="roll">Roll a die</button><button class="btn btn-lg" id="roll2">Roll two dice</button></div>
+  <div class="result" style="text-align:center;padding:28px"><div class="big" id="cout">—</div></div>
+</div></section><ol class="howto"><li>Type names, one per line</li><li>Click Pick one</li><li>Or switch to numbers, coin or dice</li></ol><section class="related"><h2>More generators</h2><div class="grid"><a class="card c-gen" href="qr-code-generator.html" data-k="qr code generator qr codes for links, wifi, whatsapp, contacts. qr code wifi whatsapp link generator generators"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v1M14 20h1M18 18h3v3h-3z"/></svg></span><span><h3>QR Code Generator</h3><p>QR codes for links, WiFi, WhatsApp, contacts.</p></span></a><a class="card c-gen" href="password-generator.html" data-k="password generator strong random passwords in one click. password strong random secure generators"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v1M14 20h1M18 18h3v3h-3z"/></svg></span><span><h3>Password Generator</h3><p>Strong random passwords in one click.</p></span></a></div></section></div></main><footer class="foot"><div class="wrap"><span>© <span id="year">2026</span> Toolkit by <a href="/">Saif Ali</a></span><span>Free, no sign-up. Everything runs in your browser.</span></div></footer>
+<script>
+
+function rnd(n) { const a = new Uint32Array(1); crypto.getRandomValues(a); return a[0] % n; }
+$('#tab').onclick = e => { const b = e.target.closest('button'); if (!b) return; $$('#tab button').forEach(x => x.setAttribute('aria-pressed', x === b)); $$('[data-p]').forEach(p => p.hidden = p.dataset.p !== b.dataset.t); };
+const hist = [];
+$('#go').onclick = () => {
+  const list = $('#names').value.split('\n').map(s => s.trim()).filter(Boolean);
+  if (!list.length) { $('#pickSub').textContent = 'Add at least one name'; return; }
+  const btn = $('#go'); btn.disabled = true; let k = 0;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const iv = setInterval(() => { $('#pick').textContent = list[rnd(list.length)]; if (++k > (reduce ? 0 : 18)) { clearInterval(iv); finish(); } }, 60);
+  function finish() {
+    const w = list[rnd(list.length)]; $('#pick').textContent = w; $('#pickSub').textContent = 'picked from ' + list.length;
+    hist.unshift(w); $('#hist').textContent = 'Picked so far: ' + hist.join(', ');
+    if ($('#rm').checked) { const i = list.indexOf(w); list.splice(i, 1); $('#names').value = list.join('\n'); }
+    btn.disabled = false;
+  }
+};
+$('#ngo').onclick = () => {
+  let a = Math.ceil(+$('#min').value), b = Math.floor(+$('#max').value), c = Math.max(1, Math.min(1000, +$('#cnt').value || 1));
+  if (a > b) [a, b] = [b, a];
+  const span = b - a + 1;
+  if ($('#uniq').checked && c > span) { $('#nout').textContent = 'Only ' + span + ' numbers in that range'; return; }
+  const out = [], seen = new Set();
+  while (out.length < c) { const n = a + rnd(span); if ($('#uniq').checked) { if (seen.has(n)) continue; seen.add(n); } out.push(n); }
+  $('#nout').textContent = out.join(', ');
+};
+const DIE = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+$('#flip').onclick = () => { $('#cout').textContent = rnd(2) ? 'Heads' : 'Tails'; };
+$('#roll').onclick = () => { const d = rnd(6); $('#cout').textContent = DIE[d] + '  ' + (d + 1); };
+$('#roll2').onclick = () => { const a = rnd(6), b = rnd(6); $('#cout').textContent = DIE[a] + ' ' + DIE[b] + '  = ' + (a + b + 2); };
+
+</script>
+</body></html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="claude:viewport-fit-sides" content="cover"><title>GPA & CGPA Calculator – Free Online | Saif's Toolkit</title><meta name="description" content="Calculate your semester GPA from course grades and your overall CGPA across semesters."><link rel="canonical" href="https://saif-ali.me/tools/cgpa-calculator.html"><meta property="og:title" content="GPA & CGPA Calculator – Free Online | Saif's Toolkit"><meta property="og:description" content="Calculate your semester GPA from course grades and your overall CGPA across semesters."><meta name="theme-color" content="#E4570F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap"><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js"></script></head><body>
+<header class="top"><div class="wrap top-in"><a class="brand" href="index.html"><span class="brand-mark"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M4 4l5 5M3 8l1 1M8 3l1 1"/></svg></span><span>Toolkit<small>saif-ali.me/tools</small></span></a><nav class="nav"><a href="index.html">All tools</a><a class="hide-sm" href="/">About</a><button id="themeToggle" class="icon-btn" aria-label="Switch light or dark mode"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/></svg></button></nav></div></header>
+<main><div class="wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">All tools</a><span>/</span><a href="index.html#calc">Calculators & converters</a></nav><div class="tool-head c-calc"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15v2.5M8.5 18h.01M12 18h.01"/></svg></span><div><h1>GPA & CGPA Calculator</h1><p class="lede">Calculate your semester GPA from course grades and your overall CGPA across semesters.</p></div></div><p class="private"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg> Free, instant, runs in your browser</p><section class="panel" aria-label="GPA & CGPA Calculator"><div class="actions" style="justify-content:space-between">
+  <div class="seg" id="tab"><button data-t="gpa" aria-pressed="true">Semester GPA</button><button data-t="cgpa" aria-pressed="false">Overall CGPA</button></div>
+  <div class="field" style="min-width:230px"><label for="scale">Grading scheme</label>
+    <select id="scale"><option value="uni">University scheme (A = 80% and above)</option><option value="hec">HEC common scale (A = 85% and above)</option></select></div>
+</div>
+<div data-p="gpa" style="display:flex;flex-direction:column;gap:14px">
+  <p class="hint">Type your marks out of 100 and the grade fills in by itself, or pick the grade directly.</p>
+  <div class="table-wrap"><table style="min-width:620px"><thead><tr><th>Course</th><th style="width:96px">Credit hrs</th><th style="width:100px">Marks %</th><th style="width:190px">Grade</th><th style="width:44px"></th></tr></thead><tbody id="courses"></tbody></table></div>
+  <div class="actions"><button class="btn" id="addc">+ Add course</button></div>
+  <div class="result"><div class="big" id="gpa"></div><div class="sm" id="gpasub"></div></div>
+</div>
+<div data-p="cgpa" hidden style="display:flex;flex-direction:column;gap:14px">
+  <div class="table-wrap"><table style="min-width:420px"><thead><tr><th>Semester</th><th style="width:130px">GPA</th><th style="width:130px">Credit hrs</th><th style="width:44px"></th></tr></thead><tbody id="sems"></tbody></table></div>
+  <div class="actions"><button class="btn" id="adds">+ Add semester</button></div>
+  <div class="result"><div class="big" id="cgpa"></div><div class="sm" id="cgpasub"></div></div>
+</div>
+<details><summary class="lbl" style="cursor:pointer">Grade table for the selected scheme</summary>
+  <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>Marks</th><th>Grade</th><th>Point</th></tr></thead><tbody id="gtable"></tbody></table></div>
+  <p class="hint" id="passnote" style="margin-top:10px"></p>
+</details></section><ol class="howto"><li>Add courses with credit hours and grades</li><li>Read your semester GPA</li><li>Switch tab to combine semesters into CGPA</li></ol><section class="related"><h2>More calculators & converters</h2><div class="grid"><a class="card c-calc" href="unit-converter.html" data-k="unit converter length, weight, area (marla, kanal), and more. convert units marla kanal tola feet cm kg calculators & converters"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15v2.5M8.5 18h.01M12 18h.01"/></svg></span><span><h3>Unit Converter</h3><p>Length, weight, area (marla, kanal), and more.</p></span></a><a class="card c-calc" href="age-calculator.html" data-k="age calculator exact age in years, months and days. age date of birth dob years months days calculators & converters"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15v2.5M8.5 18h.01M12 18h.01"/></svg></span><span><h3>Age Calculator</h3><p>Exact age in years, months and days.</p></span></a><a class="card c-calc" href="percentage-calculator.html" data-k="percentage calculator percent of, marks %, change and discount. percent percentage marks discount sale increase calculators & converters"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15v2.5M8.5 18h.01M12 18h.01"/></svg></span><span><h3>Percentage Calculator</h3><p>Percent of, marks %, change and discount.</p></span></a><a class="card c-calc" href="date-calculator.html" data-k="date calculator days between dates, or add days to a date. days between dates difference deadline add days calculators & converters"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15v2.5M8.5 18h.01M12 18h.01"/></svg></span><span><h3>Date Calculator</h3><p>Days between dates, or add days to a date.</p></span></a></div></section></div></main><footer class="foot"><div class="wrap"><span>© <span id="year">2026</span> Toolkit by <a href="/">Saif Ali</a></span><span>Free, no sign-up. Everything runs in your browser.</span></div></footer>
+<script>
+
+const SCALES = {
+  uni: [['A', 4.00, 80], ['B+', 3.50, 75], ['B', 3.00, 70], ['C+', 2.50, 65], ['C', 2.00, 60], ['D+', 1.50, 55], ['D', 1.00, 50], ['F', 0, 0]],
+  hec: [['A', 4.00, 85], ['A-', 3.67, 80], ['B+', 3.33, 75], ['B', 3.00, 71], ['B-', 2.67, 68], ['C+', 2.33, 64], ['C', 2.00, 61], ['C-', 1.67, 58], ['D+', 1.33, 54], ['D', 1.00, 50], ['F', 0, 0]],
+};
+const PASS = 'Minimum pass marks in the university scheme: BS 60%, MA/MSc/MBA 60%, MS/MPhil/LLM 65%, PhD 70%. Grading rules can change, so confirm with your department.';
+let scale = store('tk-gpa-scale') === 'hec' ? 'hec' : 'uni';
+$('#scale').value = scale;
+const G = () => SCALES[scale];
+function range(i) { const g = G(); if (i === 0) return g[0][2] + ' & above'; if (g[i][2] === 0) return 'Below ' + g[i - 1][2]; return g[i][2] + '–' + (g[i - 1][2] - 0.01).toFixed(2); }
+function gopts(sel) { return G().map((g, i) => '<option value="' + g[0] + '"' + (g[0] === sel ? ' selected' : '') + '>' + g[0] + ' (' + range(i) + ') · ' + g[1].toFixed(2) + '</option>').join(''); }
+function gradeFor(m) { return G().find(g => m >= g[2])[0]; }
+function pts(letter) { const g = G().find(x => x[0] === letter); return g ? g[1] : 0; }
+const RM = '<button class="mini" data-rm aria-label="Remove row"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>';
+let ci = 0, si = 0;
+function addCourse(name, ch, marks) {
+  ci++; const tr = document.createElement('tr');
+  const g = marks !== '' && marks != null ? gradeFor(+marks) : 'A';
+  tr.innerHTML = '<td><input type="text" aria-label="Course name" id="cn' + ci + '" value="' + esc(name || 'Course ' + ci) + '"></td>' +
+    '<td><input type="number" aria-label="Credit hours" id="ch' + ci + '" class="ch mono" min="0" step="1" value="' + (ch || 3) + '"></td>' +
+    '<td><input type="number" aria-label="Marks out of 100" id="mk' + ci + '" class="mk mono" min="0" max="100" step="any" value="' + (marks ?? '') + '" placeholder="—"></td>' +
+    '<td><select aria-label="Grade" id="cg' + ci + '" class="gp">' + gopts(g) + '</select></td><td>' + RM + '</td>';
+  $('#courses').appendChild(tr); calc();
+}
+function addSem(gpa, ch) { si++; const tr = document.createElement('tr');
+  tr.innerHTML = '<td>Semester ' + si + '</td><td><input type="number" aria-label="GPA" id="sg' + si + '" class="sg mono" min="0" max="4" step="0.01" value="' + gpa + '"></td><td><input type="number" aria-label="Credit hours" id="sc' + si + '" class="sc mono" min="0" value="' + ch + '"></td><td>' + RM + '</td>';
+  $('#sems').appendChild(tr); calc(); }
+function label(x) { return x >= 3.5 ? 'Excellent' : x >= 3 ? 'Very good' : x >= 2.5 ? 'Good' : x >= 2 ? 'Satisfactory' : 'Below 2.00, the usual minimum to stay in good standing'; }
+function calc() {
+  let q = 0, c = 0;
+  $$('#courses tr').forEach(tr => { const ch = +$('.ch', tr).value || 0; q += ch * pts($('.gp', tr).value); c += ch; });
+  $('#gpa').textContent = c ? 'GPA ' + (q / c).toFixed(2) : 'GPA —';
+  $('#gpasub').textContent = c ? c + ' credit hours · ' + label(q / c) : 'Add courses with credit hours';
+  let q2 = 0, c2 = 0;
+  $$('#sems tr').forEach(tr => { const ch = +$('.sc', tr).value || 0; q2 += ch * Math.min(4, +$('.sg', tr).value || 0); c2 += ch; });
+  $('#cgpa').textContent = c2 ? 'CGPA ' + (q2 / c2).toFixed(2) : 'CGPA —';
+  $('#cgpasub').textContent = c2 ? c2 + ' total credit hours · ' + label(q2 / c2) : 'Add semesters';
+}
+function table() {
+  $('#gtable').innerHTML = G().map((g, i) => '<tr><td class="num">' + range(i) + '</td><td>' + g[0] + '</td><td class="num">' + g[1].toFixed(2) + '</td></tr>').join('');
+  $('#passnote').textContent = scale === 'uni' ? PASS : 'HEC common scale used by many Pakistani universities. Check your own handbook.';
+}
+const panel = document.querySelector('.panel');
+panel.addEventListener('input', e => {
+  if (e.target.classList.contains('mk')) { const v = e.target.value; if (v !== '') $('.gp', e.target.closest('tr')).value = gradeFor(Math.max(0, Math.min(100, +v))); }
+  if (e.target.classList.contains('gp')) $('.mk', e.target.closest('tr')).value = '';
+  calc();
+});
+panel.addEventListener('change', e => { if (e.target.classList.contains('gp')) { $('.mk', e.target.closest('tr')).value = ''; calc(); } });
+panel.addEventListener('click', e => { const r = e.target.closest('[data-rm]'); if (r) { r.closest('tr').remove(); calc(); } });
+$('#scale').onchange = () => {
+  scale = $('#scale').value; store('tk-gpa-scale', scale);
+  $$('#courses tr').forEach(tr => { const mk = $('.mk', tr).value, sel = $('.gp', tr); const keep = mk !== '' ? gradeFor(+mk) : (G().some(g => g[0] === sel.value) ? sel.value : 'A'); sel.innerHTML = gopts(keep); });
+  table(); calc();
+};
+$('#addc').onclick = () => addCourse('', 3, ''); $('#adds').onclick = () => addSem('3.00', 18);
+$('#tab').onclick = e => { const b = e.target.closest('button'); if (!b) return; $$('#tab button').forEach(x => x.setAttribute('aria-pressed', x === b)); $$('[data-p]').forEach(p => p.hidden = p.dataset.p !== b.dataset.t); };
+[['Molecular Biology', 3, 86], ['Bioinformatics', 3, 77], ['Genetics Lab', 1, 91], ['Biostatistics', 3, 72], ['English', 2, 81]].forEach(r => addCourse(...r));
+[['3.42', 18], ['3.10', 17], ['3.56', 18]].forEach(r => addSem(...r));
+table();
+
+</script>
+</body></html>

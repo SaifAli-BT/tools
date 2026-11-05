@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="claude:viewport-fit-sides" content="cover"><title>Text Cleaner – Free Online | Saif's Toolkit</title><meta name="description" content="Clean up text copied from PDFs and websites: extra spaces, broken lines, empty lines and duplicates."><link rel="canonical" href="https://saif-ali.me/tools/text-cleaner.html"><meta property="og:title" content="Text Cleaner – Free Online | Saif's Toolkit"><meta property="og:description" content="Clean up text copied from PDFs and websites: extra spaces, broken lines, empty lines and duplicates."><meta name="theme-color" content="#E4570F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap"><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js"></script></head><body>
+<header class="top"><div class="wrap top-in"><a class="brand" href="index.html"><span class="brand-mark"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M4 4l5 5M3 8l1 1M8 3l1 1"/></svg></span><span>Toolkit<small>saif-ali.me/tools</small></span></a><nav class="nav"><a href="index.html">All tools</a><a class="hide-sm" href="/">About</a><button id="themeToggle" class="icon-btn" aria-label="Switch light or dark mode"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/></svg></button></nav></div></header>
+<main><div class="wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">All tools</a><span>/</span><a href="index.html#text">Text tools</a></nav><div class="tool-head c-text"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><div><h1>Text Cleaner</h1><p class="lede">Clean up text copied from PDFs and websites: extra spaces, broken lines, empty lines and duplicates.</p></div></div><p class="private"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg> Free, instant, runs in your browser</p><section class="panel" aria-label="Text Cleaner"><div class="cols">
+  <div class="field"><label for="in">Messy text</label><textarea id="in" rows="11">Bioinformatics   is the application of
+computational tools to   biological
+data.
+
+It helps researchers    analyse DNA,
+RNA and protein   sequences.
+It helps researchers    analyse DNA,
+</textarea></div>
+  <div class="field"><label for="out">Clean text</label><textarea id="out" rows="11" readonly></textarea></div>
+</div>
+<div class="checks" id="opts">
+  <label class="check"><input type="checkbox" id="o-space" checked> Remove extra spaces</label>
+  <label class="check"><input type="checkbox" id="o-join" checked> Join broken lines (text copied from PDF)</label>
+  <label class="check"><input type="checkbox" id="o-empty"> Remove empty lines</label>
+  <label class="check"><input type="checkbox" id="o-dup"> Remove duplicate lines</label>
+  <label class="check"><input type="checkbox" id="o-all"> Put everything on one line</label>
+  <label class="check"><input type="checkbox" id="o-html"> Strip HTML tags</label>
+</div>
+<div class="actions"><button class="btn btn-primary" id="copy"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg> Copy clean text</button><button class="btn" id="clear">Clear</button><span class="hint" id="diff"></span></div></section><ol class="howto"><li>Paste messy text</li><li>Tick the fixes you want</li><li>Copy the clean text</li></ol><section class="related"><h2>More text tools</h2><div class="grid"><a class="card c-text" href="text-to-handwriting.html" data-k="text to handwriting turn typed text into a handwritten assignment. handwriting handwritten assignment notes text to handwriting copy text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Text to Handwriting</h3><p>Turn typed text into a handwritten assignment.</p></span></a><a class="card c-text" href="word-counter.html" data-k="word counter count words, characters and reading time. count words characters essay assignment limit text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Word Counter</h3><p>Count words, characters and reading time.</p></span></a><a class="card c-text" href="case-converter.html" data-k="case converter uppercase, lowercase, title case and more. uppercase lowercase title capital letters text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Case Converter</h3><p>UPPERCASE, lowercase, Title Case and more.</p></span></a><a class="card c-text" href="text-compare.html" data-k="text compare highlight differences between two texts. diff difference compare check changes text tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg></span><span><h3>Text Compare</h3><p>Highlight differences between two texts.</p></span></a></div></section></div></main><footer class="foot"><div class="wrap"><span>© <span id="year">2026</span> Toolkit by <a href="/">Saif Ali</a></span><span>Free, no sign-up. Everything runs in your browser.</span></div></footer>
+<script>
+
+const I = $('#in'), O = $('#out');
+function run() {
+  let s = I.value.replace(/\r\n?/g, '\n');
+  if ($('#o-html').checked) s = s.replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&');
+  if ($('#o-join').checked) s = s.split(/\n\s*\n/).map(p => p.replace(/-\n(?=\p{Ll})/gu, '').replace(/\s*\n\s*/g, ' ')).join('\n\n');
+  if ($('#o-space').checked) s = s.split('\n').map(l => l.replace(/[ \t ]+/g, ' ').trim()).join('\n');
+  if ($('#o-dup').checked) { const seen = new Set(); s = s.split('\n').filter(l => { const k = l.trim(); if (!k) return true; if (seen.has(k)) return false; seen.add(k); return true; }).join('\n'); }
+  if ($('#o-empty').checked) s = s.split('\n').filter(l => l.trim()).join('\n');
+  if ($('#o-all').checked) s = s.replace(/\s*\n+\s*/g, ' ');
+  O.value = s.trim();
+  $('#diff').textContent = I.value.length ? I.value.length + ' → ' + O.value.length + ' characters' : '';
+}
+I.oninput = run; $('#opts').onchange = run; run();
+$('#copy').onclick = () => copyText(O.value, O);
+$('#clear').onclick = () => { I.value = ''; run(); I.focus(); };
+
+</script>
+</body></html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="claude:viewport-fit-sides" content="cover"><title>Split PDF – Free Online | Saif's Toolkit</title><meta name="description" content="Pull out selected pages from a PDF, as one new file or as separate single-page files."><link rel="canonical" href="https://saif-ali.me/tools/split-pdf.html"><meta property="og:title" content="Split PDF – Free Online | Saif's Toolkit"><meta property="og:description" content="Pull out selected pages from a PDF, as one new file or as separate single-page files."><meta name="theme-color" content="#E4570F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap"><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js"></script></head><body>
+<header class="top"><div class="wrap top-in"><a class="brand" href="index.html"><span class="brand-mark"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M4 4l5 5M3 8l1 1M8 3l1 1"/></svg></span><span>Toolkit<small>saif-ali.me/tools</small></span></a><nav class="nav"><a href="index.html">All tools</a><a class="hide-sm" href="/">About</a><button id="themeToggle" class="icon-btn" aria-label="Switch light or dark mode"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/></svg></button></nav></div></header>
+<main><div class="wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">All tools</a><span>/</span><a href="index.html#pdf">PDF & file tools</a></nav><div class="tool-head c-pdf"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><h1>Split PDF</h1><p class="lede">Pull out selected pages from a PDF, as one new file or as separate single-page files.</p></div></div><p class="private"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Your files stay on your device. Nothing is uploaded.</p><section class="panel" aria-label="Split PDF"><label class="drop" id="drop" tabindex="0"><span class="drop-ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></span><strong>Drop a PDF here or click to choose</strong><span>Pick the pages you want to keep</span><input type="file" id="file" accept="application/pdf,.pdf" ></label>
+<div id="opts" hidden>
+  <div class="file"><span class="ph">PDF</span><div class="meta"><div class="name" id="fname"></div><div class="sub" id="finfo"></div></div></div>
+  <div class="cols">
+    <div class="field"><label for="ranges">Pages to extract</label><input type="text" id="ranges" class="mono" placeholder="e.g. 1-3, 5, 8-end"></div>
+    <div class="field"><label for="mode">Output</label><select id="mode"><option value="one">All selected pages in one PDF</option><option value="each">Each page as its own PDF (ZIP)</option></select></div>
+  </div>
+  <div class="actions"><button class="btn btn-primary btn-lg" id="go"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Extract pages</button><span class="hint" id="status"></span></div>
+</div></section><ol class="howto"><li>Add your PDF</li><li>Type the pages you want, e.g. 1-3, 7</li><li>Choose one file or one file per page</li></ol><section class="related"><h2>More pdf & file tools</h2><div class="grid"><a class="card c-pdf" href="file-converter.html" data-k="file converter pdf, word, excel, csv, text and images. convert word docx excel xlsx csv pdf to jpg txt doc file pdf & file tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span><h3>File Converter</h3><p>PDF, Word, Excel, CSV, text and images.</p></span></a><a class="card c-pdf" href="images-to-pdf.html" data-k="images to pdf turn photos of notes or documents into one pdf. jpg to pdf photo picture convert scan assignment pdf & file tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span><h3>Images to PDF</h3><p>Turn photos of notes or documents into one PDF.</p></span></a><a class="card c-pdf" href="merge-pdf.html" data-k="merge pdf join several pdfs into one file. combine join pdf files pdf & file tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span><h3>Merge PDF</h3><p>Join several PDFs into one file.</p></span></a><a class="card c-pdf" href="rotate-pdf.html" data-k="rotate pdf fix sideways or upside-down pages. turn flip orientation pdf pdf & file tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span><h3>Rotate PDF</h3><p>Fix sideways or upside-down pages.</p></span></a><a class="card c-pdf" href="compress-pdf.html" data-k="compress pdf shrink scanned and image-heavy pdfs. reduce pdf size smaller shrink pdf & file tools"><span class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span><h3>Compress PDF</h3><p>Shrink scanned and image-heavy PDFs.</p></span></a></div></section></div></main><footer class="foot"><div class="wrap"><span>© <span id="year">2026</span> Toolkit by <a href="/">Saif Ali</a></span><span>Free, no sign-up. Everything runs in your browser.</span></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script><script>
+
+function parseRanges(str, max) {
+  const out = [];
+  for (const part of str.split(',').map(s => s.trim()).filter(Boolean)) {
+    const m = part.match(/^(\d+)\s*(?:-\s*(\d+|end))?$/i);
+    if (!m) throw new Error('"' + part + '" is not a valid page or range. Use e.g. 1-3, 5, 8-end');
+    const a = +m[1], b = m[2] ? (/end/i.test(m[2]) ? max : +m[2]) : a;
+    if (a < 1 || b > max || a > b) throw new Error('Pages must be between 1 and ' + max + '.');
+    for (let i = a; i <= b; i++) out.push(i - 1);
+  }
+  if (!out.length) throw new Error('Enter at least one page number.');
+  return out;
+}
+
+let src = null, file = null;
+setupDrop($('#drop'), $('#file'), async fs => {
+  file = fs[0];
+  try { src = await PDFLib.PDFDocument.load(await file.arrayBuffer(), { ignoreEncryption: true }); }
+  catch (e) { toast('Cannot open this PDF. It may be damaged or password-protected.'); return; }
+  const n = src.getPageCount();
+  $('#fname').textContent = file.name; $('#finfo').textContent = n + ' pages · ' + fmtBytes(file.size);
+  $('#ranges').value = n > 1 ? '1-' + Math.min(n, 2) : '1'; $('#opts').hidden = false; $('#status').textContent = '';
+});
+$('#go').onclick = async () => {
+  let idx; try { idx = parseRanges($('#ranges').value, src.getPageCount()); } catch (e) { $('#status').innerHTML = '<span class="err">' + esc(e.message) + '</span>'; return; }
+  const b = baseName(file.name);
+  $('#status').textContent = 'Working…';
+  if ($('#mode').value === 'one') {
+    const out = await PDFLib.PDFDocument.create();
+    (await out.copyPages(src, idx)).forEach(p => out.addPage(p));
+    download(new Blob([await out.save()], { type: 'application/pdf' }), b + '-pages.pdf');
+  } else {
+    const zip = new JSZip();
+    for (const i of idx) { const out = await PDFLib.PDFDocument.create(); const [p] = await out.copyPages(src, [i]); out.addPage(p); zip.file(b + '-page-' + (i + 1) + '.pdf', await out.save()); }
+    download(await zip.generateAsync({ type: 'blob' }), b + '-pages.zip');
+  }
+  $('#status').textContent = 'Done · ' + idx.length + ' page' + (idx.length > 1 ? 's' : '') + ' extracted';
+};
+
+</script>
+</body></html>
